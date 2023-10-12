@@ -1,0 +1,43 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+c-text
+-----------------------------------------------------*/
+.c-text {
+  &--h1 {
+    @include inc.sizingRem(font-size, wide, 40px, spl, 25px);
+    @include inc.sizing(line-height, wide, 80px, spl, 50px);
+    //line-height: 1;
+    font-weight: 400;
+    font-family: "Futo Go B101";
+    span {
+      @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+      @include inc.sizing(margin-top, wide, 16px, spl, 8px);
+      display: block;
+      line-height: 1;
+    }
+    &.news-title {
+      @include inc.sizing(padding-top, wide, 32px, spl, 0px);
+      @include inc.sizing(margin-bottom, wide, 100px, spl, 56px);//2 お知らせ一覧
+    }
+    & + p {
+      padding-left: 6.6%;
+      @include inc.mq(min) {
+        @include inc.sizing(padding-left, tab, 25px, min, 25px);
+      }
+      @include inc.mq(tab) {
+        @include inc.sizing(padding-left, tabl, 64px, tab, 25px);
+      }
+      @include inc.mq(tabl) {
+        @include inc.sizing(padding-left, wide, 96px, tabl, 64px);
+      }
+    }
+  }
+  &--h2 {
+    @include inc.sizingRem(font-size, wide, 26px, spl, 18px);
+    @include inc.sizing(line-height, wide, 48px, spl, 32px);
+    @include inc.sizing(margin-bottom, wide, 24px, spl, 24px);
+    font-weight: 500;
+  }
+}
+

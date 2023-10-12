@@ -1,0 +1,83 @@
+@charset 'UTF-8';
+
+/*
+i-setting
+-----------------------------------------------------*/
+
+//====================================
+//  Viewport
+//====================================
+// Contentの幅
+$content-width: 375px !default;
+// ブレークポイントの設定
+$breakpoints: (
+  sps: 320px,
+  sp: 375px,
+  spl: 520px,
+  min: 620px,
+  tab: 768px,
+  tabl: 960px,
+  lap: 1025px,
+  desk: 1201px,
+  vr: 1280px,
+  vrl: 1380px,
+  wide: 1568px,
+  full: 1700px,
+);
+
+//====================================
+//  Color
+//====================================
+
+// ベースカラー　背景色
+$color-wht: #fff;
+$color-org: #E95504;
+$color-bg01: #F0F0F0;
+$color-bg02: #EDEDED;
+$color-brd01: #D8D8D8;
+$color-brd02: #C1C1C1;
+$color-brd03: #CCCCCC;
+$color-blk: #000;
+
+
+//====================================
+//  リンクカラー
+//====================================
+a, img, a img {
+  border:none;
+  outline:none;
+  text-decoration: none;
+  color: #000;
+}
+
+//====================================
+//  Font
+//====================================
+body {
+  font-family: "dnp-shuei-gothic-gin-std","游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "MS Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+//P22 Mackinac Pro Bold
+// font-family: p22-mackinac-pro, serif;
+// font-weight: 700;
+// font-style: normal;
+
+//DNP ShueiGoGinStd M
+// font-family: dnp-shuei-gothic-gin-std, sans-serif;
+// font-weight: 500;
+// font-style: normal;
+
+//DNP ShueiGoGinStd B
+// font-family: dnp-shuei-gothic-gin-std, sans-serif;
+// font-weight: 600;
+// font-style: normal;
+
+
+a[href^="tel:"] {
+	pointer-events: none;
+}
+
+
+
