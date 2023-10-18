@@ -4,5 +4,104 @@
 l-main
 -----------------------------------------------------*/
 .l-main {
-    @include inc.sizing(padding-bottom, wide, 384px, spl, 192px);
+    border-bottom: 1px solid inc.$color-brd02;
+    padding: 0 2.564vw 0;
+    @include inc.sizing(padding-bottom, wide, 160px, spl, 50px);
+    & + .l-main {
+        @include inc.sizing(padding-top, wide, 160px, spl, 50px);
+    }
+    &.-flx {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__left {
+        width: 28.2vw;
+        .c-title {
+            line-height: 1.6;
+            span {
+                font-family: dnp-shuei-gothic-gin-std, sans-serif;
+                font-weight: 600;
+                font-style: normal;
+                @include inc.sizingRem(font-size, wide, 20px, spl, 16px);
+                display: block;
+            }
+        }
+        &---lead {
+            margin: 0 0 12px;
+        }
+    }
+    &__right {
+        width: 58.97vw;
+    }
+    &__left2 {
+        width: 23.08vw;
+        .c-title {
+            line-height: 1.4;
+            span {
+                font-family: dnp-shuei-gothic-gin-std, sans-serif;
+                font-weight: 600;
+                font-style: normal;
+                @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+                display: block;
+            }
+        }
+    }
+    &__right2 {
+        width: 58.97vw;
+    }
 }
+
+
+
+
+.conts-areaA {
+    padding: 80px 100px;
+    &.pickup-bg {
+        background: inc.$color-bg01;
+    }
+    &.pickup-border {
+        border: 1px solid inc.$color-brd01;
+    }
+}
+.conts-areaB {
+    width: 43.59vw;
+    margin: 0 0 0 5.13vw;
+    &.pickup-bg {
+        background: inc.$color-bg01;
+        padding: 30px 50px;
+    }
+    &.pickup-border {
+        border: 1px solid inc.$color-brd01;
+        padding: 30px 50px;
+    }
+}
+
+.-narrow {
+    width: 56%;
+}
+
+.column01-center {
+    margin: 0 auto;
+    // max-width: 556px;
+    max-width: 28.21vw;
+}
+
+.column02 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 5.13vw;
+    &.-reverse {
+        flex-direction:row-reverse;
+        padding-left: 5.13vw;
+        padding-right: 0;
+    }
+    .column02-ph {
+        width: 48.72vw;
+    }
+    .column02-txt {
+        width: 28.21vw;
+    }
+}
+

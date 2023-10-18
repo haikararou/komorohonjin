@@ -8,8 +8,8 @@ l-body
   width: 100%;
   -webkit-font-smoothing: antialiased;
   @include inc.sizingRem(font-size, wide, 16px, tab, 16px);
-  @include inc.sizingRem(font-size, tabl, 16px, sp, 12px);
-  color: inc.$color-grn;
+  @include inc.sizingRem(font-size, tab, 16px, sp, 14px);
+  // color: inc.$color-grn;
 }
 
 .l-body.sp.open {

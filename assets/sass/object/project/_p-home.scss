@@ -279,7 +279,6 @@ p-home
                 @include inc.mq(min) {
                     @include inc.sizing(width, tab, 138px, min, 112px);
                     @include inc.sizing(padding-left, tab, 18px, min, 9px);
-                    border-left: 1px solid inc.$color-grn3;
                     display: flex;
                     flex-direction: column;
                 }

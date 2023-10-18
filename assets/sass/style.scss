@@ -41,16 +41,15 @@
 @use "object/project/p-header";
 @use "object/project/p-text-box";
 @use "object/project/p-table";
+@use "object/project/p-list";
 @use "object/project/p-nav";
 @use "object/project/p-breadcrumb";
 @use "object/project/p-link-box";
 @use "object/project/p-home";
-@use "object/project/p-about";
 @use "object/project/p-form";
-@use "object/project/p-news";
 @use "object/project/p-pagenav";
-@use "object/project/p-product";
-@use "object/project/p-information";
+@use "object/project/p-accordion";
+
 
 /*
   3.3 - Utility

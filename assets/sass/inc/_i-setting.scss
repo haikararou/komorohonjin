@@ -38,6 +38,9 @@ $color-brd01: #D8D8D8;
 $color-brd02: #C1C1C1;
 $color-brd03: #CCCCCC;
 $color-blk: #000;
+$color-dot: #aaa;
+$color-num: #838486;
+$color-gry: #aaa;
 
 
 //====================================
@@ -79,5 +82,7 @@ a[href^="tel:"] {
 	pointer-events: none;
 }
 
-
+* {
+  box-sizing: border-box;
+}
 

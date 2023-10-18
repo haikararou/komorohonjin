@@ -8,7 +8,6 @@ p-header
   transition: all 0.3s ease-out;
   //overflow: hidden;
   height: 60px!important;
-  border-bottom: 1px solid inc.$color-grn3;
   @include inc.mq(tab) {
     height: 100px!important;
     border: none;
@@ -96,7 +95,6 @@ p-header
     &.nav-list02 {
       overflow: 1;
       width: 9rem; //144
-      border-left: 1px solid inc.$color-grn3;
       .p-header__nav-item {
         width: 100%;
         text-align: center;
@@ -159,9 +157,7 @@ p-header
       width: 64px;
       //@include inc.sizing(width, wide, 64px, tabl, 50px);
       display: block;
-      //border: 1px solid inc.$color-grn;
       height: 1px!important;
-      background-color: inc.$color-grn;
       margin-top: -3px;
     }
     & > span:nth-child(2) {
@@ -179,7 +175,6 @@ p-header
 }
 .reversal.open .p-header__burger---design {
   & > span {
-    background-color: inc.$color-grn;
   }
 }
 
@@ -286,7 +281,6 @@ p-header
         flex-direction: column;
         .p-header__nav-item {
           opacity: 0;
-          border-bottom: 1px solid inc.$color-grn3;
           text-align: center;
           a {
             display: block;
@@ -313,7 +307,6 @@ p-header
             display:flex; flex-direction:column; justify-content:center; align-items:center;
             height: 100%;
             position: relative;
-            background: inc.$color-grn2;
             span {
               color: inc.$color-wht;
               font-size: 12px;
@@ -388,7 +381,6 @@ p-header
         @include inc.sizingRem(font-size, tab, 16px, spl, 14px);
         height: 70px;
         display:flex; flex-direction:column; justify-content:center; align-items:center;
-        border-bottom: 1px solid inc.$color-grn3;
         &:first-child{
           display: flex;
         }
@@ -400,8 +392,6 @@ p-header
     &.nav-list02 {
       width: 100%;
       border-left: none;
-      background: inc.$color-grn2;
-      padding: 2rem;
       position: fixed;
       left: 0;
       bottom: 0;
@@ -455,7 +445,6 @@ a.underline::before {
   content: '';
   width: 100%;
   height: 1px;
-  background: inc.$color-grn;
   transform: scale(1, 1);
   transform-origin: left top;
   transition: transform .3s;
@@ -475,7 +464,6 @@ a.underline::after {
   content: '';
   width: 100%;
   height: 1px;
-  background: inc.$color-grn;
   transform: scale(0, 1);
   transform-origin: right top;
   transition: transform .3s;
@@ -489,9 +477,6 @@ a.underline::after {
 }
 
 a.underline2 {
-  background: -webkit-gradient(linear, left top, right top, from(inc.$color-grn), to(inc.$color-grn)) no-repeat 100% 100%/0 1px;
-  background: -webkit-linear-gradient(left, inc.$color-grn, inc.$color-grn) no-repeat 100% 100%/0 1px;
-  background: linear-gradient(90deg, inc.$color-grn, inc.$color-grn) no-repeat 100% 100%/0 1px;
   -webkit-transition: background-size 0.4s;
   transition: background-size 0.4s;
   padding-bottom: 2px;
@@ -504,9 +489,6 @@ a.underline2 {
 }
 
 a.underline3 h2 {
-  background: -webkit-gradient(linear, left top, right top, from(inc.$color-grn), to(inc.$color-grn)) no-repeat 100% 100%/0 1px;
-  background: -webkit-linear-gradient(left, inc.$color-grn, inc.$color-grn) no-repeat 100% 100%/0 1px;
-  background: linear-gradient(90deg, inc.$color-grn, inc.$color-grn) no-repeat 100% 100%/0 1px;
   -webkit-transition: background-size 0.4s;
   transition: background-size 0.4s;
   padding-bottom: 2px;
@@ -519,9 +501,6 @@ a.underline3 h2 {
 }
 
 a.underline4 span {
-  background: -webkit-gradient(linear, left top, right top, from(inc.$color-grn2), to(inc.$color-grn2)) no-repeat 100% 100%/0 1px;
-  background: -webkit-linear-gradient(left, inc.$color-grn2, inc.$color-grn2) no-repeat 100% 100%/0 1px;
-  background: linear-gradient(90deg, inc.$color-grn2, inc.$color-grn2) no-repeat 100% 100%/0 1px;
   -webkit-transition: background-size 0.4s;
   transition: background-size 0.4s;
   padding-bottom: 2px;
@@ -586,7 +565,6 @@ a.underline4 span {
     bottom: -8px;
     left: 50%;
     margin-left: -.5rem;
-    background-color: inc.$color-grn;
     -webkit-transform: scale(0, 1);
     transform: scale(0, 1);
     -webkit-transform-origin: right top;
@@ -602,7 +580,6 @@ a.underline4 span {
     display: block;
     bottom: -8px;
     left: 50%;
-    background-color: inc.$color-grn;
     -webkit-transform: scale(0, 1);
     transform: scale(0, 1);
     -webkit-transform-origin: left top;

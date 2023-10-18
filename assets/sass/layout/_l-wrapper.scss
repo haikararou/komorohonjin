@@ -4,25 +4,25 @@
 l-wrapper
 -----------------------------------------------------*/
 html {
-  @include inc.sizingRem(font-size, wide, 16px, tabl, 14px);
+  // @include inc.sizingRem(font-size, wide, 16px, tabl, 14px);
 }
 
 .l-wrapper {
   width: 100%;
   margin: 0 auto;
   padding: 0 6.6%;
-  &.lead {
-    max-width: 100%;
-    width: 100%;
-  }
-  @include inc.mq(min) {
-    padding: 0;
-    @include inc.sizing(max-width, tab, 666px, min, 538px);
-  }
-  @include inc.mq(tab) {
-    @include inc.sizing(max-width, tabl, 820px, tab, 666px);
-  }
-  @include inc.mq(tabl) {
-    @include inc.sizing(max-width, wide, 1312px, tabl, 820px);
-  }
+  // &.lead {
+  //   max-width: 100%;
+  //   width: 100%;
+  // }
+  // @include inc.mq(min) {
+  //   padding: 0;
+  //   @include inc.sizing(max-width, tab, 666px, min, 538px);
+  // }
+  // @include inc.mq(tab) {
+  //   @include inc.sizing(max-width, tabl, 820px, tab, 666px);
+  // }
+  // @include inc.mq(tabl) {
+  //   @include inc.sizing(max-width, wide, 1312px, tabl, 820px);
+  // }
 }

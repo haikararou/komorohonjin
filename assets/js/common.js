@@ -195,3 +195,12 @@ listener(mediaQueryList);
 
 
 
+
+
+//アコーディオン
+$('.p-accordion dt').click(function(){
+    $(this).siblings('.p-accordion dd').stop().slideToggle();
+    $('.p-accordion dt').not($(this)).siblings('.p-accordion dd').slideUp();
+    $(this).parent().toggleClass('active');
+    $('.p-accordion dt').not($(this)).parent().removeClass('active');
+});

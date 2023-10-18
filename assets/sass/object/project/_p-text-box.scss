@@ -7,34 +7,57 @@ p {
   margin: 0;
   padding: 0;
   line-height: 200%;
-  //@include inc.sizing(margin-bottom, wide, 72px, tabl, 24px);
-  line-height: 2.2;
+  line-height: 2;
   font-size: 14px;
   @include inc.mq(min) {
-      @include inc.sizingRem(font-size, tabl, 12px, min, 10px);
+      @include inc.sizingRem(font-size, tabl, 15px, spl, 14px);
   }
   @include inc.mq(tabl) {
-      @include inc.sizingRem(font-size, wide, 16px, tabl, 12px);
+      @include inc.sizingRem(font-size, wide, 16px, tabl, 15px);
   }
 }
 
-ul.list--dot {
-  margin: 0;
-  padding: 1rem 0 1rem 1.5rem;
-  li {
-    margin: 0;
-    padding: 0;
-    & + li {
-      margin-top: .5rem
-    }
-  }
-}
+// ul.list--dot {
+//   margin: 0;
+//   padding: 1rem 0 1rem 1.5rem;
+//   li {
+//     margin: 0;
+//     padding: 0;
+//     & + li {
+//       margin-top: .5rem
+//     }
+//   }
+// }
 
 p + p {
-  @include inc.sizing(margin-top, wide, 32px, spl, 24px);
+  @include inc.sizing(margin-top, wide, 32px, spl, 16px);
 }
+
 .p-text-box {
+  .c-title {
+    &.-LL {
+      margin: 0 0 1rem;
+    }
+    &.-L {
+      margin: 0 0 1rem;
+    }
+    &.-M {
+      margin: 0 0 1rem;
+    }
+    &.-S {
+      margin: 0 0 1rem;
+    }
+    &.-SS {
+      margin: 0 0 1rem;
+    }
+  }
   & + .p-text-box {
-    @include inc.sizing(margin-top, wide, 96px, spl, 48px);
+    @include inc.sizing(margin-top, wide, 80px, spl, 30px);
+  }
+}
+
+.p-column-box {
+  + .p-column-box {
+    @include inc.sizing(margin-top, wide, 160px, spl, 50px);
   }
 }

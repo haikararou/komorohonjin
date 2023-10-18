@@ -4,9 +4,7 @@
 p-table
 -----------------------------------------------------*/
 .p-dl-table {
-  border-top: 1px solid inc.$color-grn3;
   div {
-    border-bottom: 1px solid inc.$color-grn3;
     padding: 1.5rem 0;
     display: block;
     @include inc.mq(min) {

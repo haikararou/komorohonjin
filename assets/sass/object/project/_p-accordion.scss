@@ -1,0 +1,100 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+p-accordion
+-----------------------------------------------------*/
+.p-accordion {
+  div {
+    border-top: 1px solid inc.$color-brd03;
+    border-bottom: 1px solid inc.$color-brd03;
+    padding: 60px 0 0;
+    transition: background-color .5s linear;
+    & + div {
+      border-top: none;
+    }
+    &.active {
+      background: inc.$color-bg01;
+    }
+    dt {
+      @include inc.sizingRem(font-size, wide, 24px, spl, 20px);
+      padding: 0 100px 60px 100px;
+      position: relative;
+      cursor: pointer;
+      &:before {
+        content: "Q";
+        display: block;
+        color: inc.$color-num;
+        font-family: p22-mackinac-pro, serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1;
+        position: absolute;
+        left: 50px;
+        top: .7rem;
+      }
+    }
+    dd {
+      display: none;
+      @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+      padding: 0 100px 60px 100px;
+      position: relative;
+      &:before {
+        content: "A";
+        display: block;
+        color: inc.$color-num;
+        font-family: p22-mackinac-pro, serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1;
+        position: absolute;
+        left: 50px;
+        top: .7rem;
+      }
+    }
+  }
+}
+
+// .p-accordion dt {
+//   position: relative;/*+マークの位置基準とするためrelative指定*/
+//   cursor: pointer;
+//   font-size:1rem;
+//   font-weight: normal;
+//   padding: 3% 3% 3% 50px;
+//   transition: all .5s ease;
+// }
+
+// /*アイコンの＋と×*/
+// .p-accordion dt::before,
+// .p-accordion dt::after{
+//   position: absolute;
+//   content:'';
+//   width: 15px;
+//   height: 2px;
+//   background-color: #333;
+// }
+// .p-accordion dt::before{
+//   top:48%;
+//   left: 15px;
+//   transform: rotate(0deg);
+// }
+// .p-accordion dt::after{
+//   top:48%;
+//   left: 15px;
+//   transform: rotate(90deg);
+// }
+// .p-accordion dt.active::before{
+// transform: rotate(45deg);
+// }
+
+// .p-accordion dt.active::after{
+// transform: rotate(-45deg);
+// }
+
+// .p-accordion dd {
+// display: none;/*はじめは非表示*/
+// background: #f3f3f3;
+// margin:0 3% 3% 3%;
+// padding: 3%;
+// }
