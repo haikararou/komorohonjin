@@ -19,7 +19,7 @@ $(function() {
 /*------------------------------------------------------------------*/
 /*ドロワーメニュー ----------------------------------------------------*/
 var modalopen = false;
-$('.p-header__burger').click(function (e) {
+$('.l-body').click(function (e) {
     if (modalopen == false) {
         drowerChange('view');
     } else if (modalopen == true) {
@@ -40,87 +40,6 @@ function drowerChange(bl) {
             {
                 'right': '0',
                 delay: 0,
-                ease: Power2.easeOut,
-                onComplete: function () {},
-            }
-        );
-        TweenMax.fromTo(
-            $('.p-header__nav'),
-            0,
-            {},
-            {
-                opacity: '1',
-                ease: Power2.easeOut,
-                onComplete: function () {},
-            }
-        );
-        TweenMax.fromTo(
-            $('.p-header__nav-list.nav-list01'),
-            0,
-            {opacity: '0',},
-            {
-                opacity: '1',
-                ease: Power2.easeOut,
-                onComplete: function () {},
-            }
-        );
-        TweenMax.fromTo(
-            $('.p-header__nav-item01'),
-            1,
-            {opacity: '0',},
-            {
-                opacity: '1',
-                delay: 0.2,
-                ease: Power2.easeOut,
-            }
-        );
-        TweenMax.fromTo(
-            $('.p-header__nav-item02'),
-            1,
-            {opacity: '0',},
-            {
-                opacity: '1',
-                delay: 0.25,
-                ease: Power2.easeOut,
-            }
-        );
-        TweenMax.fromTo(
-            $('.p-header__nav-item03'),
-            1,
-            {opacity: '0',},
-            {
-                opacity: '1',
-                delay: 0.3,
-                ease: Power2.easeOut,
-            }
-        );
-        TweenMax.fromTo(
-            $('.p-header__nav-item04'),
-            1,
-            {opacity: '0',},
-            {
-                opacity: '1',
-                delay: 0.35,
-                ease: Power2.easeOut,
-            }
-        );
-        TweenMax.fromTo(
-            $('.p-header__nav-item05'),
-            1,
-            {opacity: '0',},
-            {
-                opacity: '1',
-                delay: 0.4,
-                ease: Power2.easeOut,
-            }
-        );
-        TweenMax.fromTo(
-            $('.p-header__nav-list.nav-list02 a'),
-            0.6,
-            { opacity: '0' },
-            {
-                opacity: '1',
-                delay: 0.3,
                 ease: Power2.easeOut,
                 onComplete: function () {},
             }

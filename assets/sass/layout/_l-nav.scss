@@ -4,4 +4,23 @@
 l-nav
 -----------------------------------------------------*/
 .l-nav {
+    position: fixed;
+    z-index: 10;
+    color: inc.$color-wht;
+    background: inc.$color-blk;
+    width: calc( 61.54vw + 2.564vw );
+    height: 100vh;
+    top: 0;
+    right: calc( -61.54vw - 2.564vw );;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    a {
+        color: inc.$color-wht;
+    }
+}
+
+.l-body.open {
+    .l-nav {
+        right: 0;
+    }
 }

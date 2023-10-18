@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+@use "../inc/" as inc;
+/*
+l-burger
+-----------------------------------------------------*/
+.l-burger {
+    width: 45px;
+    height: 47px;
+    background: url(../img/common/burger.svg) no-repeat 50% 50%;
+    background-size: contain;
+    position: fixed;
+    top: 60px;
+    right: 2.564vw;
+    cursor: pointer;
+}

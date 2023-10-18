@@ -52,6 +52,19 @@ l-main
     }
 }
 
+.templateA {
+    .l-main__left {
+        height: calc( 100vh - 100px );
+        position: relative;
+        .-position {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    .l-main__right {
+        padding-top: 344px;
+    }
+}
 
 
 
