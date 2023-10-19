@@ -75,14 +75,27 @@ p-list
     .-flx {
       display: flex;
       flex-wrap: wrap;
+      @include inc.mq(tab) {
+        display: block;
+      }
       & + .-flx {
         margin-top: 1.2rem;
       }
       dt {
-        width: 20%;
+        @include inc.mq(tab) {
+          width: 20%;
+        }
       }
       dd {
-        width: 80%;
+        @include inc.mq(tab) {
+          width: 80%;
+        }
+      }
+      dt + dd {
+        margin-top: 10px;
+        @include inc.mq(tab) {
+          margin-top: 0;
+        }
       }
     }
   }

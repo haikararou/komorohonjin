@@ -5,8 +5,13 @@ l-main
 -----------------------------------------------------*/
 .l-main {
     border-bottom: 1px solid inc.$color-brd02;
-    padding: 0 2.564vw 0;
-    @include inc.sizing(padding-bottom, wide, 160px, spl, 50px);
+    padding: 0 7.5vw;
+    @include inc.sizing(padding-bottom, tab, 100px, spl, 50px);
+    @include inc.mq(tab) {
+        padding: 0 2.564vw;
+        @include inc.sizing(padding-bottom, wide, 160px, tab, 100px);
+    }
+    //@include inc.sizing(padding-bottom, wide, 160px, spl, 50px);
     & + .l-main {
         @include inc.sizing(padding-top, wide, 160px, spl, 50px);
     }
@@ -16,7 +21,12 @@ l-main
         justify-content: space-between;
     }
     &__left {
-        width: 28.2vw;
+        @include inc.mq(tab) {
+            width: 28.2vw;
+        }
+        @include inc.mq(desk) {
+            width: 28.2vw;
+        }
         .c-title {
             line-height: 1.6;
             span {
@@ -28,14 +38,30 @@ l-main
             }
         }
         &---lead {
-            margin: 0 0 12px;
+            margin: 0 0 30px;
+            @include inc.mq(tab) {
+                margin: 0 0 12px;
+            }
         }
     }
     &__right {
-        width: 58.97vw;
+        @include inc.mq(tab) {
+            width: 53.85vw;
+        }
+        @include inc.mq(desk) {
+            width: 58.97vw;
+        }
     }
     &__left2 {
-        width: 23.08vw;
+        margin: 0 0 50px;
+        width: 100%;
+        @include inc.mq(tab) {
+            margin: 0;
+            width: 23.08vw;
+        }
+        @include inc.mq(desk) {
+            width: 23.08vw;
+        }
         .c-title {
             line-height: 1.4;
             span {
@@ -48,73 +74,135 @@ l-main
         }
     }
     &__right2 {
-        width: 58.97vw;
+        width: 100%;
+        @include inc.mq(tab) {
+            width: 53.85vw;
+        }
+        @include inc.mq(desk) {
+            width: 58.97vw;
+        }
     }
 }
 
 .templateA {
+    padding-top: 200px;
     .l-main__left {
-        height: calc( 100vh - 100px );
-        position: relative;
-        .-position {
-            position: absolute;
-            bottom: 0;
+        padding-top: 0;
+        margin-bottom: 80px;
+        @include inc.sizing(margin-bottom, wide, 120px, spl, 80px);
+        @include inc.mq(tab) {
+            height: calc( 100vh - 100px );
+            position: relative;
+            .-position {
+                position: absolute;
+                bottom: 0;
+            }
         }
     }
     .l-main__right {
-        padding-top: 344px;
+        @include inc.mq(tab) {
+            padding-top: 344px;
+        }
     }
 }
 
 
 
 .conts-areaA {
-    padding: 80px 100px;
+    @include inc.mq(desk) {
+        padding: 80px 100px;
+    }
     &.pickup-bg {
         background: inc.$color-bg01;
+        padding: 5vw;
+        @include inc.mq(tab) {
+            padding: 30px 60px;
+        }
+        @include inc.mq(desk) {
+            padding: 80px 100px;
+        }
     }
     &.pickup-border {
         border: 1px solid inc.$color-brd01;
+        padding: 5vw;
+        @include inc.mq(tab) {
+            padding: 30px 60px;
+        }
+        @include inc.mq(desk) {
+            padding: 80px 100px;
+        }
     }
 }
 .conts-areaB {
-    width: 43.59vw;
-    margin: 0 0 0 5.13vw;
+    @include inc.mq(tab) {
+        margin: 0 0 0 10.27vw;
+    }
+    @include inc.mq(desk) {
+        width: 43.59vw;
+        margin: 0 0 0 5.13vw;
+    }
     &.pickup-bg {
         background: inc.$color-bg01;
-        padding: 30px 50px;
+        padding: 5vw;
+        @include inc.mq(tab) {
+            padding: 30px 30px;
+        }
+        @include inc.mq(desk) {
+            padding: 30px 50px;
+        }
     }
     &.pickup-border {
         border: 1px solid inc.$color-brd01;
-        padding: 30px 50px;
+        padding: 5vw;
+        @include inc.mq(tab) {
+            padding: 30px 30px;
+        }
+        @include inc.mq(desk) {
+            padding: 30px 50px;
+        }
     }
 }
 
 .-narrow {
-    width: 56%;
+    @include inc.mq(desk) {
+        //width: 56%;
+        width: 33.33vw;
+    }
 }
 
 .column01-center {
     margin: 0 auto;
     // max-width: 556px;
-    max-width: 28.21vw;
+    @include inc.mq(tab) {
+        max-width: 28.21vw;
+    }
 }
 
 .column02 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-right: 5.13vw;
+    @include inc.mq(tab) {
+        padding-right: 5.13vw;
+    }
     &.-reverse {
-        flex-direction:row-reverse;
-        padding-left: 5.13vw;
-        padding-right: 0;
+        @include inc.mq(tab) {
+            flex-direction:row-reverse;
+            padding-left: 5.13vw;
+            padding-right: 0;
+        }
     }
     .column02-ph {
-        width: 48.72vw;
+        margin-bottom: 7.5vw;
+        @include inc.mq(tab) {
+            margin-bottom: 0;
+            width: 48.72vw;
+        }
     }
     .column02-txt {
-        width: 28.21vw;
+        @include inc.mq(tab) {
+            width: 28.21vw;
+        }
     }
 }
 

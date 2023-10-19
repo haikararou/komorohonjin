@@ -7,64 +7,12 @@ p-footer
   padding: 0 2.564vw 0;
   @include inc.sizing(padding-top, wide, 160px, spl, 50px);
   @include inc.sizing(padding-bottom, wide, 160px, spl, 50px);
-  &__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    &---logo {
-      width: 12.82vw;
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-    &---navi {
-      width: 33.33vw;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    &---grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
-      .grid1 { grid-area: 1 / 1 / 2 / 2; width: 20.51vw;}
-      .grid2 { grid-area: 2 / 1 / 3 / 2; width: 20.51vw; margin-top: 40px;}
-      .grid3 { grid-area: 1 / 2 / 2 / 3; width: 12.82vw;}
-      .grid4 { grid-area: 2 / 2 / 3 / 3; width: 12.82vw; margin-top: 40px;}
-      dl {
-        dt {
-          @include inc.sizingRem(font-size, wide, 14px, spl, 12px);
-          font-family: p22-mackinac-pro, serif;
-          font-weight: 700;
-          font-style: normal;
-          color: inc.$color-gry;
-          @include inc.sizing(margin-bottom, tab, 30px, spl, 20px);
-        }
-        dd {
-          address {
-            font-style: normal;
-          }
-          p {
-            line-height: 2;
-            & + p {
-              margin-top: 6px;
-            }
-            .-tel {
-              letter-spacing: .12rem;
-            }
-            .-time {
-              @include inc.sizingRem(font-size, wide, 14px, spl, 12px);
-              letter-spacing: .12rem;
-            }
-          }
-        }
-      }
-    }
-  }
   small {
+    text-align: center;
+    @include inc.mq(tabl) {
+      text-align: left;
+    }
+    display: block;
     @include inc.sizingRem(font-size, wide, 12px, spl, 10px);
     font-family: p22-mackinac-pro, serif;
     font-weight: 700;
@@ -82,11 +30,12 @@ p-footer
   }
   &__bottom {
     width: 100%;
-    height: 983px;
+    //height: 983px;
+    @include inc.sizing(height, wide, 983px, tabl, 700px);
     background: url(../img/common/bottom.jpg) no-repeat 50% 50%;
     background-size: cover;
     display:flex; flex-direction:column; justify-content:center; align-items:center;
-    @include inc.sizingRem(font-size, wide, 40px, spl, 24px);
+    @include inc.sizingRem(font-size, wide, 40px, spl, 20px);
     color: inc.$color-wht;
     line-height: 2.6;
     a {
@@ -94,7 +43,7 @@ p-footer
       font-family: p22-mackinac-pro, serif;
       font-weight: 700;
       font-style: normal;
-      @include inc.sizingRem(font-size, wide, 20px, spl, 16px);
+      @include inc.sizingRem(font-size, wide, 20px, spl, 14px);
       &.c-link.-blankB {
         span:before {
           background: url(../img/common/arw_wht.svg) no-repeat 50% 50%;

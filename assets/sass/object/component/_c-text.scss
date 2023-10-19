@@ -6,44 +6,74 @@ c-text
 .c-title {
   &.-LL {
     @include inc.sizingRem(font-size, wide, 50px, spl, 24px);
-    margin: 0 0 2rem;
+    //margin: 0 0 2rem;
+    & + * {
+      margin-top: 2rem;
+    }
   }
   &.-L {
     @include inc.sizingRem(font-size, wide, 30px, spl, 20px);
-    margin: 0 0 2rem;
+    //margin: 0 0 2rem;
+    & + * {
+      margin-top: 2rem;
+    }
   }
   &.-M {
     @include inc.sizingRem(font-size, wide, 24px, spl, 20px);
-    margin: 0 0 2rem;
+    //margin: 0 0 2rem;
+    & + * {
+      margin-top: 2rem;
+    }
   }
   &.-S {
     @include inc.sizingRem(font-size, wide, 20px, spl, 16px);
-    margin: 0 0 2rem;
+    //margin: 0 0 2rem;
+    & + * {
+      margin-top: 2rem;
+    }
   }
   &.-SS {
     @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
-    margin: 0 0 2rem;
+    //margin: 0 0 2rem;
+    & + * {
+      margin-top: 2rem;
+    }
   }
   &.-eng {
     &.-LL {
       @include inc.sizingRem(font-size, wide, 70px, spl, 24px);
-      margin: 0 0 2rem;
+      //margin: 0 0 2rem;
+      & + * {
+        margin-top: 2rem;
+      }
     }
     &.-L {
       @include inc.sizingRem(font-size, wide, 40px, spl, 24px);
-      margin: 0 0 2rem;
+      //margin: 0 0 2rem;
+      & + * {
+        margin-top: 2rem;
+      }
     }
     &.-M {
       @include inc.sizingRem(font-size, wide, 24px, spl, 18px);
-      margin: 0 0 2rem;
+      //margin: 0 0 2rem;
+      & + * {
+        margin-top: 2rem;
+      }
     }
     &.-S {
       @include inc.sizingRem(font-size, wide, 18px, spl, 14px);
-      margin: 0 0 2rem;
+      //margin: 0 0 2rem;
+      & + * {
+        margin-top: 2rem;
+      }
     }
     &.-SS {
       @include inc.sizingRem(font-size, wide, 14px, spl, 12px);
-      margin: 0 0 2rem;
+      //margin: 0 0 2rem;
+      & + * {
+        margin-top: 2rem;
+      }
     }
   }
 }

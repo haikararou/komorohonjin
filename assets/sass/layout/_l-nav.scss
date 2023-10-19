@@ -8,14 +8,43 @@ l-nav
     z-index: 10;
     color: inc.$color-wht;
     background: inc.$color-blk;
-    width: calc( 61.54vw + 2.564vw );
+    width: 1350px;
+    max-width: calc( 61.54vw + 2.564vw );
+    min-width: 725px;
     height: 100vh;
     top: 0;
-    right: calc( -61.54vw - 2.564vw );;
+    right: calc( -61.54vw - 2.564vw - 80vw);
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
     a {
         color: inc.$color-wht;
+    }
+    &--list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        @include inc.sizing(width, wide, 180px, lap, 140px);
+        //width: 9.5vw;
+        text-align: right;
+        position: absolute;
+        right: 50px;
+        top: 210px;
+        li {
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            a {
+                font-family: p22-mackinac-pro, serif;
+                font-weight: 700;
+                font-style: normal;
+                @include inc.sizingRem(font-size, wide, 40px, spl, 24px);
+                line-height: 1;
+                display: block;
+            }
+            & + li {
+                margin-top: 30px;
+            }
+        }
     }
 }
 

@@ -19,7 +19,7 @@ $(function() {
 /*------------------------------------------------------------------*/
 /*ドロワーメニュー ----------------------------------------------------*/
 var modalopen = false;
-$('.l-body').click(function (e) {
+$('.l-burger').click(function (e) {
     if (modalopen == false) {
         drowerChange('view');
     } else if (modalopen == true) {

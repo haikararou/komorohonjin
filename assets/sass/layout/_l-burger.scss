@@ -4,12 +4,29 @@
 l-burger
 -----------------------------------------------------*/
 .l-burger {
-    width: 45px;
-    height: 47px;
+    // width: 45px;
+    // height: 47px;
+    width: 29px;
+    height: 30px;
+    @include inc.sizing(width, desk, 32px, spl, 29px);
+    @include inc.sizing(height, desk, 47px, spl, 30px);
+    @include inc.sizing(width, vr, 45px, desk, 32px);
+    @include inc.sizing(height, vr, 47px, desk, 34px);
     background: url(../img/common/burger.svg) no-repeat 50% 50%;
     background-size: contain;
     position: fixed;
-    top: 60px;
+    //top: 60px;
+    top: 68px;
+    @include inc.sizing(top, desk, 66px, spl, 68px);
+    @include inc.sizing(top, vr, 60px, desk, 66px);
     right: 2.564vw;
     cursor: pointer;
+    z-index: 11;
 }
+
+.open {
+    .l-burger {
+        background: url(../img/common/cross.svg) no-repeat 50% 50%;
+    }
+}
+

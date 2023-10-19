@@ -4,13 +4,19 @@
 p-header
 -----------------------------------------------------*/
 .p-header {
-  width: 30.77vw;
+  // width: 30.77vw;
+  width: 525px;
+  @include inc.sizing(width, vr, 575px, lap, 525px);
+  // @include inc.mq(tabl) {
+  //   width: 575px;
+  // }
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   position: absolute;
   top: 50px;
-  right: calc( 5.13vw + 2.564vw);
+  //right: calc( 5.13vw + 2.564vw);
+  right: calc( 2.564vw + 100px);
   height: 70px;
   &__list {
     display: flex;
@@ -114,6 +120,13 @@ p-header
           }
           &:before, &:after {
             background: url(../img/common/brackets_wht.svg) no-repeat 50% 50%;
+          }
+        }
+      }
+      &.-list02 {
+        li + li {
+          &:before {
+            background: url(../img/common/slash_wht.svg) no-repeat 50% 50%;
           }
         }
       }
