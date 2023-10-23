@@ -15,7 +15,7 @@ l-main
     & + .l-main {
         @include inc.sizing(padding-top, wide, 160px, spl, 50px);
     }
-    &.-flx {
+    &.-flx, .-flx {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -64,13 +64,13 @@ l-main
         }
         .c-title {
             line-height: 1.4;
-            span {
-                font-family: dnp-shuei-gothic-gin-std, sans-serif;
-                font-weight: 600;
-                font-style: normal;
-                @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
-                display: block;
-            }
+            // span {
+            //     font-family: dnp-shuei-gothic-gin-std, sans-serif;
+            //     font-weight: 600;
+            //     font-style: normal;
+            //     @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+            //     display: block;
+            // }
         }
     }
     &__right2 {

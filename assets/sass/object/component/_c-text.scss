@@ -46,12 +46,26 @@ c-text
       & + * {
         margin-top: 2rem;
       }
+      span {
+        font-family: dnp-shuei-gothic-gin-std, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        @include inc.sizingRem(font-size, wide, 20px, spl, 18px);
+        display: block;
+      }
     }
     &.-L {
       @include inc.sizingRem(font-size, wide, 40px, spl, 24px);
       //margin: 0 0 2rem;
       & + * {
         margin-top: 2rem;
+      }
+      span {
+        font-family: dnp-shuei-gothic-gin-std, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+        display: block;
       }
     }
     &.-M {
@@ -90,4 +104,8 @@ c-text
   font-family: dnp-shuei-gothic-gin-std, sans-serif;
   font-weight: 500;
   font-style: normal;
+}
+
+.t-center {
+  text-align: center;
 }

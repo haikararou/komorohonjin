@@ -16,7 +16,8 @@ p-header
   position: absolute;
   top: 50px;
   //right: calc( 5.13vw + 2.564vw);
-  right: calc( 2.564vw + 100px);
+  //right: calc( 2.564vw + 6vw);
+  @include inc.sizing(right, vr, 150px, lap, 90px);
   height: 70px;
   &__list {
     display: flex;
@@ -110,29 +111,29 @@ p-header
   }
 }
 
-.l-body.open {
-  .p-header {
-    &__list {
-      &.-list01 {
-        .-item02 {
-          a {
-            color: inc.$color-wht;
-          }
-          &:before, &:after {
-            background: url(../img/common/brackets_wht.svg) no-repeat 50% 50%;
-          }
-        }
-      }
-      &.-list02 {
-        li + li {
-          &:before {
-            background: url(../img/common/slash_wht.svg) no-repeat 50% 50%;
-          }
-        }
-      }
-    }
-  }
-}
+// .l-body.open {
+//   .p-header {
+//     &__list {
+//       &.-list01 {
+//         .-item02 {
+//           a {
+//             color: inc.$color-wht;
+//           }
+//           &:before, &:after {
+//             background: url(../img/common/brackets_wht.svg) no-repeat 50% 50%;
+//           }
+//         }
+//       }
+//       &.-list02 {
+//         li + li {
+//           &:before {
+//             background: url(../img/common/slash_wht.svg) no-repeat 50% 50%;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 
 

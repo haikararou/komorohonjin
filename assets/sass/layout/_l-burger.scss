@@ -27,6 +27,7 @@ l-burger
 .open {
     .l-burger {
         background: url(../img/common/cross.svg) no-repeat 50% 50%;
+        background-size: contain;
     }
 }
 

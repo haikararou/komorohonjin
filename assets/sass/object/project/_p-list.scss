@@ -34,8 +34,9 @@ p-list
       padding-left: 1.5em;
       line-height: 2;
       margin: 0;
+      @include inc.sizingRem(font-size, wide, 14px, spl, 12px);
       & + li {
-        margin-top: .8rem;
+        margin-top: 0rem;
       }
     }
     li:before {
@@ -73,10 +74,10 @@ p-list
   }
   &.-dl {
     .-flx {
-      display: flex;
-      flex-wrap: wrap;
+      display: block;
       @include inc.mq(tab) {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
       }
       & + .-flx {
         margin-top: 1.2rem;
@@ -84,6 +85,7 @@ p-list
       dt {
         @include inc.mq(tab) {
           width: 20%;
+          padding-right: 3rem;
         }
       }
       dd {
