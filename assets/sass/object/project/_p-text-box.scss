@@ -36,6 +36,13 @@ p + p {
 * + .-near {
   //@include inc.sizing(margin-top, wide, 12px, spl, 8px);
   margin-top: clamp(8px, 0.38vw + 6px, 12px)!important;
+  margin-bottom: clamp(8px, 0.38vw + 6px, 12px)!important;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  a {
+    text-align: center;
+  }
 }
 
 

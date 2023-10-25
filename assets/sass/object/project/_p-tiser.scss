@@ -159,7 +159,7 @@ p-tiser
         dl {
             .-flx + .-flx {
                 margin-top: 40px!important;
-                @include inc.mq(tab) {
+                @include inc.mq(vr) {
                     margin-top: 80px!important;
                 }
             }
@@ -169,6 +169,16 @@ p-tiser
                 font-family: p22-mackinac-pro, serif;
                 font-weight: 700;
                 font-style: normal;
+                width: 100%!important;
+                @include inc.mq(vr) {
+                    width: 28%!important;
+                }
+            }
+            dt + dd {
+                margin-top: 10px!important;
+                @include inc.mq(vr) {
+                    margin-top: 0!important;
+                }
             }
             dd {
                 ul {
@@ -183,8 +193,8 @@ p-tiser
                         & + li {
                             margin-top: .6rem;
                         }
-                        @include inc.mq(tab) {
-                            padding-left: 1.6em;
+                        @include inc.mq(vr) {
+                            padding-left: 1.8em;
                             & + li {
                                 margin-top: .8rem;
                             }
@@ -200,7 +210,7 @@ p-tiser
                         position: absolute; /*絶対配置*/
                         left: .2em; /*点の位置*/
                         top: .55rem;
-                        @include inc.mq(tab) {
+                        @include inc.mq(vr) {
                             width: 20px; /*点の幅*/
                             height: 20px; /*点の高さ*/
                             left: .2em; /*点の位置*/
@@ -210,7 +220,7 @@ p-tiser
                 }
                 * + ul {
                     margin-top: 10px;
-                    @include inc.mq(tab) {
+                    @include inc.mq(vr) {
                         margin-top: 30px;
                     }
                 }
@@ -358,32 +368,66 @@ p-tiser
 
     &__map {
         .-map {
-            display: grid;
-            // grid-template-columns: 23.08vw 58.97vw;
-            grid-template-rows: 882px 563px;
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
-            width: 100%;
-            margin-bottom: 50px;
-            .div1 {
-                grid-area: 1 / 1 / 2 / 2;
-                display:flex;
-                justify-content:flex-end;
-                flex-flow: column;
-                .l-main__left---lead {
-                    padding-right: 10vw;
+            #google_map{
+                //margin: 0;
+                position: absolute!important;
+                top: 50px;
+                left: 50%;
+                margin-left: -50vw;
+                //height: 65vw;
+                @include inc.sizing(height, vr, 720px, spl, 400px);
+                width: 100vw;
+                //margin: 50px 0 50px -3.72vw;
+                @include inc.mq(vr) {
+                    position: relative;
+                    top: auto!important;
+                    left: auto!important;
+                    margin: 50px 0;
+                    width: 100%;
                 }
             }
-            .div2 { grid-area: 1 / 2 / 3 / 3; width: 58.97vw;}
-            .div3 {
-                grid-area: 2 / 1 / 3 / 2;
-                display:flex;
-                justify-content:flex-end;
-                flex-flow: column;
+            .div2 {
+                position: relative;
+                @include inc.sizing(padding-top, vr, 820px, spl, 500px);
+            }
+            @include inc.mq(vr) {
+                display: grid;
+                // grid-template-columns: 23.08vw 58.97vw;
+                grid-template-rows: 882px 563px;
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+                width: 100%;
+                margin-bottom: 50px;
+                .div1 {
+                    grid-area: 1 / 1 / 2 / 2;
+                    display:flex;
+                    justify-content:flex-end;
+                    flex-flow: column;
+                    padding-bottom: 70px;
+                    .l-main__left---lead {
+                        padding-right: 10vw;
+                    }
+                }
+                .div2 {
+                    grid-area: 1 / 2 / 3 / 3;
+                    width: 58.97vw;
+                    padding: 0;
+                }
+                .div3 {
+                    grid-area: 2 / 1 / 3 / 2;
+                    display:flex;
+                    justify-content:flex-end;
+                    flex-flow: column;
+                }
+                #google_map{
+                    height: 1445px;
+                    width: 100%;
+                    margin: 0 0 50px;
+                }
             }
             .map_add {
                 padding-right: 10vw;
-                margin-top: 140px;
+                //margin-top: 140px;
                 dl {
                     margin-bottom: 50px;
                     div {
@@ -422,6 +466,42 @@ p-tiser
                 p {
                     @include inc.sizing(padding-left, vr, 32px, spl, 24px);
                 }
+            }
+        }
+        .l-main__left2 {
+            display: none!important;
+        }
+        .l-main__right2 {
+            width: 100%!important;
+            margin-top: 80px;
+            dl {
+                dt {
+                    width: 100%!important;
+                    @include inc.mq(vr) {
+                        width: 28%!important;
+                    }
+                }
+                dt + dd {
+                    margin-top: 10px!important;
+                    @include inc.mq(vr) {
+                        margin-top: 0!important;
+                    }
+                }
+                div + div {
+                    margin-top: 50px!important;
+                    @include inc.mq(vr) {
+                        margin-top: 0!important;
+                    }
+                }
+            }
+        }
+        @include inc.mq(vr) {
+            .l-main__left2 {
+                display: block!important;
+            }
+            .l-main__right2 {
+                margin-top: 0;
+                width: 58.97vw!important;
             }
         }
     }
@@ -572,17 +652,22 @@ p-tiser
         .title_train, .title_car {
             position: relative;
             padding: 0 0 0 48px;
-            @include inc.sizingRem(font-size, wide, 24px, spl, 18px);
+            em {
+                @include inc.sizingRem(font-size, wide, 24px, spl, 18px);
+                @include inc.mq(tab) {
+                    padding-right: 3rem;
+                }
+            }
             @include inc.sizing(margin-bottom, vr, 40px, spl, 20px);
             span {
                 display: block;
                 line-height: 2;
                 margin-top: 10px;
                 @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
-                @include inc.mq(tab) {
+                @include inc.mq(vr) {
                     margin-top: 0;
                     display: inline;
-                    padding-left: 3rem;
+                    //padding-left: 3rem;
                 }
             }
             &:before {

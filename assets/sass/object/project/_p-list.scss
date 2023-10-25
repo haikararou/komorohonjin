@@ -81,6 +81,7 @@ p-list
       @include inc.mq(tab) {
         display: flex;
         flex-wrap: wrap;
+        justify-content: left;
       }
       & + .-flx {
         margin-top: 2rem;
@@ -89,14 +90,16 @@ p-list
         }
       }
       dt {
+        line-height: 2;
         @include inc.mq(tab) {
-          width: 20%;
+          width: 28%;
           padding-right: 3rem;
         }
       }
       dd {
+        line-height: 2;
         @include inc.mq(tab) {
-          width: 80%;
+          //width: 80%;
         }
       }
       dt + dd {

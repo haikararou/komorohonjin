@@ -58,6 +58,9 @@ l-main
                 margin: 0 0 12px;
             }
         }
+        &---thumb {
+            @include inc.sizing(margin-top, wide, 120px, spl, 60px);
+        }
     }
     &__right {
         @include inc.mq(tab) {
