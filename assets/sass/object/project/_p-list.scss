@@ -44,8 +44,11 @@ p-list
       display: block;
       position: absolute; /*絶対配置*/
       left: .2em; /*点の位置*/
-      top: .4rem;
+      top: .15rem;
       font-size: 11px;
+      @include inc.mq(tab) {
+        top: .4rem;
+      }
     }
   }
   &.-num {
@@ -80,7 +83,10 @@ p-list
         flex-wrap: wrap;
       }
       & + .-flx {
-        margin-top: 1.2rem;
+        margin-top: 2rem;
+        @include inc.mq(tab) {
+          margin-top: 1.2rem;
+        }
       }
       dt {
         @include inc.mq(tab) {

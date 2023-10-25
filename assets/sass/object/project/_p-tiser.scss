@@ -3,8 +3,338 @@
 /*
 p-tiser
 -----------------------------------------------------*/
+.p-header {
+    background: inc.$color-bg01;
+    width: auto;
+    right: 0;
+    left: 0;
+    top: 0px;
+    height: 55px;
+    justify-content: center;
+    .p-header__list {
+        height: 55px;
+        gap: 0 16px;
+        li {
+            height: 55px;
+        }
+    }
+    @include inc.mq(tab) {
+        left: auto;
+        background: none;
+        width: auto;
+        right: 2.564vw;
+        top: 10px;
+        justify-content: end;
+        .p-header__list {
+            height: 55px;
+            gap: 0 40px;
+            li {
+                height: 55px;
+            }
+        }
+    }
+}
+
+#f-view {
+    height: 100vh;
+    min-height: 760px;
+    position: relative;
+    display:flex; flex-direction:column; justify-content:center; align-items:center;
+    .f-view {
+        figure {
+            @include inc.sizing(margin-top, vr, -40px, spl, -30px);
+            text-align: center;
+            @include inc.sizing(width, vr, 380px, spl, 222px);
+            img {
+                width: 100%;
+                height: auto;
+            }
+            figcaption {
+                font-family: p22-mackinac-pro, serif;
+                font-weight: 700;
+                font-style: normal;
+                @include inc.sizingRem(font-size, wide, 27px, spl, 16px);
+                @include inc.sizing(margin-top, vr, 32px, spl, 12px);
+                line-height: 1;
+            }
+        }
+        .sns {
+            display: none;
+            @include inc.mq(tab) {
+                margin-top: 80px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0 20px;
+            }
+        }
+    }
+    .scrolldown1{
+        /*描画位置※位置は適宜調整してください*/
+        position:absolute;
+        left:50%;
+        bottom: -15px;
+        /*全体の高さ*/
+        height:calc(12vh + 20px);
+    }
+
+    /*Scrollテキストの描写*/
+    .scrolldown1 span{
+        /*描画位置*/
+        position: absolute;
+        left:-15px;
+        top: -25px;
+        /*テキストの形状*/
+        color: inc.$color-blk;
+        font-size: 0.7rem;
+        letter-spacing: 0.05em;
+        font-family: p22-mackinac-pro, serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 13px;
+    }
+
+    /* 線の描写 */
+    .scrolldown1::after{
+        content: "";
+        /*描画位置*/
+        position: absolute;
+        top: 0;
+        /*線の形状*/
+        width: 1px;
+        height: 20vh;
+        background: inc.$color-blk;
+        /*線の動き1.4秒かけて動く。永遠にループ*/
+        animation: pathmove 1.4s ease-in-out infinite;
+        opacity:0;
+    }
+
+    /*高さ・位置・透過が変化して線が上から下に動く*/
+    @keyframes pathmove{
+        0%{
+            height:0;
+            top:0;
+            opacity: 0;
+        }
+        30%{
+            height:6vh;
+            opacity: 1;
+        }
+        100%{
+            height:0;
+            top:12vh;
+            opacity: 0;
+        }
+    }
+}
+
+#lead {
+    display:flex; flex-direction:column; justify-content:center; align-items:center;
+    @include inc.sizing(padding-top, vr, 280px, spl, 120px);
+    @include inc.sizing(padding-bottom, vr, 280px, spl, 120px);
+    .-lead {
+        margin: 0 auto;
+        @include inc.mq(tab) {
+            width: 660px;
+        }
+    }
+    h2 {
+        @include inc.sizingRem(font-size, wide, 50px, spl, 24px);
+        @include inc.mq(tab) {
+            text-align: center
+        }
+    }
+    h3 {
+        @include inc.sizingRem(font-size, wide, 20px, spl, 17px);
+        margin-top: 30px;
+        @include inc.sizing(margin-bottom, vr, 60px, spl, 40px);
+        @include inc.mq(tab) {
+            text-align: center
+        }
+    }
+}
 
 .p-tiser {
+    &__menu {
+        dl {
+            .-flx + .-flx {
+                margin-top: 40px!important;
+                @include inc.mq(tab) {
+                    margin-top: 80px!important;
+                }
+            }
+            dt {
+                color: inc.$color-bwn;
+                @include inc.sizingRem(font-size, wide, 20px, spl, 14px);
+                font-family: p22-mackinac-pro, serif;
+                font-weight: 700;
+                font-style: normal;
+            }
+            dd {
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        list-style-type: none; /*点を非表示*/
+                        position: relative; /*基準位置*/
+                        padding-left: 2em;
+                        line-height: 2;
+                        margin: 0;
+                        & + li {
+                            margin-top: .6rem;
+                        }
+                        @include inc.mq(tab) {
+                            padding-left: 1.6em;
+                            & + li {
+                                margin-top: .8rem;
+                            }
+                        }
+                    }
+                    li:before {
+                        content: "";
+                        display: block;
+                        width: 15px; /*点の幅*/
+                        height: 15px; /*点の高さ*/
+                        border-radius: 50%; /*丸くする*/
+                        background: inc.$color-bwn; /*点の色*/
+                        position: absolute; /*絶対配置*/
+                        left: .2em; /*点の位置*/
+                        top: .55rem;
+                        @include inc.mq(tab) {
+                            width: 20px; /*点の幅*/
+                            height: 20px; /*点の高さ*/
+                            left: .2em; /*点の位置*/
+                            top: .4rem;
+                        }
+                    }
+                }
+                * + ul {
+                    margin-top: 10px;
+                    @include inc.mq(tab) {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+        .menu-info {
+            border: 1px solid inc.$color-brd02;
+            margin-top: 20px;
+            padding: 15px;
+            @include inc.mq(tab) {
+                margin-top: 80px;
+                padding: 30px;
+            }
+        }
+        &.-dinner {
+            dl {
+                dd {
+                    ul {
+                        li:before {
+                            background: inc.$color-blu; /*点の色*/
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__reserve {
+        .reserve-box {
+            border: 1px solid inc.$color-blk;
+            text-align: center;
+            padding: 0 0 20px;
+            h2 {
+                border-bottom: 1px solid inc.$color-blk;
+                line-height: 1;
+                @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+                padding: 20px;
+            }
+            h3 {
+                margin: 24px 0 18px;
+                line-height: 1;
+                span {
+                    position: relative;
+                    color: inc.$color-org;
+                    display: block;
+                    width: 86%;
+                    margin: 0 auto;
+                    @include inc.sizingRem(font-size, wide, 20px, spl, 18px);
+                    &:before, &:after {
+                        content: "";
+                        display: block;
+                        width: 9px;
+                        height: 28px;
+                        background: url(../img/common/brackets_org.svg) no-repeat 50% 50%;
+                        background-size: contain;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translate(0%, -50%);
+                    }
+                    &:after {
+                        left: auto;
+                        right: 0;
+                        top: 50%;
+                        transform: translate(0%, -50%) rotate(180deg);
+                    }
+                }
+            }
+            h4 {
+                @include inc.sizingRem(font-size, wide, 24px, spl, 18px);
+                @include inc.sizing(margin-bottom, vr, 6px, spl, 2px);
+            }
+            h5 {
+                @include inc.sizingRem(font-size, wide, 16px, spl, 12px);
+            }
+        }
+        .-information {
+            margin: 30px 0;
+            background: inc.$color-wht;
+            border: 1px solid inc.$color-blk;
+            padding: 20px;
+        }
+        .lunch, .dinner, .party {
+            span {
+                position: relative;
+                margin-left: 56px;
+                @include inc.sizingRem(font-size, wide, 14px, spl, 12px);
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    left: -28px;
+                    top: 50%;
+                }
+            }
+        }
+        .lunch {
+            span {
+                &:before {
+                    background: url(../img/tiser/lunch.svg) no-repeat 50% 50%;
+                    background-size: contain;
+                }
+            }
+        }
+        .dinner {
+            span {
+                &:before {
+                    background: url(../img/tiser/dinner.svg) no-repeat 50% 50%;
+                    background-size: contain;
+                }
+            }
+        }
+        .party {
+            span {
+                &:before {
+                    background: url(../img/tiser/party.svg) no-repeat 50% 50%;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+
     &__information {
         .qr-img {
             display: flex;
@@ -26,6 +356,75 @@ p-tiser
         }
     }
 
+    &__map {
+        .-map {
+            display: grid;
+            // grid-template-columns: 23.08vw 58.97vw;
+            grid-template-rows: 882px 563px;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            width: 100%;
+            margin-bottom: 50px;
+            .div1 {
+                grid-area: 1 / 1 / 2 / 2;
+                display:flex;
+                justify-content:flex-end;
+                flex-flow: column;
+                .l-main__left---lead {
+                    padding-right: 10vw;
+                }
+            }
+            .div2 { grid-area: 1 / 2 / 3 / 3; width: 58.97vw;}
+            .div3 {
+                grid-area: 2 / 1 / 3 / 2;
+                display:flex;
+                justify-content:flex-end;
+                flex-flow: column;
+            }
+            .map_add {
+                padding-right: 10vw;
+                margin-top: 140px;
+                dl {
+                    margin-bottom: 50px;
+                    div {
+                        & + div {
+                            @include inc.sizing(margin-top, vr, 50px, spl, 32px);
+                        }
+                        dt {
+                            @include inc.sizingRem(font-size, wide, 24px, spl, 18px);
+                            @include inc.sizing(padding-left, vr, 32px, spl, 24px);
+                            position: relative;
+                            &:before {
+                                content: "";
+                                display: block;
+                                @include inc.sizing(width, vr, 19px, spl, 12px);
+                                @include inc.sizing(height, vr, 25px, spl, 16px);
+                                background: url(../img/tiser/pin02.svg) no-repeat 50% 50%;
+                                background-size: contain;
+                                position: absolute;
+                                left: 0;
+                                top: .4rem;
+                            }
+                            &.-first {
+                                &:before {
+                                    background: url(../img/tiser/pin01.svg) no-repeat 50% 50%;
+                                    background-size: contain;
+                                }
+                            }
+                        }
+                        dd {
+                            margin-top: 6px;
+                            @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+                            @include inc.sizing(padding-left, vr, 32px, spl, 24px);
+                        }
+                    }
+                }
+                p {
+                    @include inc.sizing(padding-left, vr, 32px, spl, 24px);
+                }
+            }
+        }
+    }
 
     &__access {
         .access-grid01 {

@@ -109,3 +109,48 @@ c-text
 .t-center {
   text-align: center;
 }
+
+.-w32 {
+  width: 32vw;
+}
+
+
+.p-title-L {
+    margin: 0 0 80px;
+  .p-title-01 {
+    @include inc.sizingRem(font-size, wide, 70px, spl, 35px);
+    span {
+      font-family: dnp-shuei-gothic-gin-std, sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+      display: block;
+    }
+  }
+  .p-title-02 {
+    @include inc.sizingRem(font-size, wide, 24px, spl, 14px);
+    span {
+      @include inc.sizingRem(font-size, wide, 18px, spl, 12px);
+    }
+  }
+}
+
+.p-title-M {
+  margin: 0 0 40px;
+  @include inc.mq(tab) {
+    margin: 0 0 80px;
+  }
+  .p-title-01 {
+    @include inc.sizingRem(font-size, wide, 40px, spl, 24px);
+    span {
+      font-family: dnp-shuei-gothic-gin-std, sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      @include inc.sizingRem(font-size, wide, 20px, spl, 14px);
+      display: block;
+    }
+  }
+  .p-title-02 {
+    @include inc.sizingRem(font-size, wide, 20px, spl, 14px);
+  }
+}

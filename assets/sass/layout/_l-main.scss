@@ -20,6 +20,21 @@ l-main
         flex-wrap: wrap;
         justify-content: space-between;
     }
+    .-baseline {
+        align-items: baseline;
+
+    }
+    .-start {
+        justify-content: flex-start;
+        gap: 0 30px;
+    }
+    .-end {
+        justify-content: end;
+        gap: 0 7.69vw;
+    }
+    .-flex-end {
+        align-items: flex-end;
+    }
     &__left {
         @include inc.mq(tab) {
             width: 28.2vw;
@@ -82,6 +97,19 @@ l-main
             width: 58.97vw;
         }
     }
+    &__left3, &__right3 {
+        width: 100%;
+        @include inc.mq(tab) {
+            width: 38.41vw;
+        }
+    }
+    &__right3 {
+        margin-top: 60px;
+        @include inc.mq(tab) {
+            margin-top: 0px;
+        }
+    }
+
 }
 
 .templateA {

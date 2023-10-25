@@ -8,12 +8,14 @@ c-link
         span {
             text-decoration: underline;
             text-underline-offset: 0.5rem;
+            white-space: nowrap;
         }
     }
     &.-arwA {
         span {
             position: relative;
             margin-left: 28px;
+            white-space: nowrap;
         }
         span:before {
             content: "";
@@ -31,6 +33,7 @@ c-link
     &.-arwB {
         span {
             position: relative;
+            white-space: nowrap;
         }
         span:before {
             content: "";
@@ -49,6 +52,7 @@ c-link
         span {
             position: relative;
             margin-left: 28px;
+            white-space: nowrap;
         }
         span:before {
             content: "";
@@ -66,6 +70,7 @@ c-link
     &.-blankB {
         span {
             position: relative;
+            white-space: nowrap;
         }
         span:before {
             content: "";
@@ -83,6 +88,8 @@ c-link
     &.-border {
         border: 1px solid inc.$color-blk;
         padding: .6rem 1rem;
+        display: inline-block;
+        line-height: 1.6;
         &.-arwB {
             padding-right: calc(1rem + 28px);
         }
