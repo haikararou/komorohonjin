@@ -42,6 +42,11 @@ p + p {
   gap: 10px;
   a {
     text-align: center;
+    width: 100%;
+    @include inc.mq(spl) {
+      width: 100%;
+      max-width: 320px;
+    }
   }
 }
 
@@ -67,6 +72,12 @@ p + p {
   }
   & + .p-text-box {
     @include inc.sizing(margin-top, wide, 80px, spl, 30px);
+  }
+}
+
+.p-conts {
+  & + .p-conts {
+    @include inc.sizing(margin-top, wide, 40px, spl, 24px);
   }
 }
 

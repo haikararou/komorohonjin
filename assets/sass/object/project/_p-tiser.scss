@@ -11,6 +11,7 @@ p-tiser
     top: 0px;
     height: 55px;
     justify-content: center;
+    z-index: 99;
     .p-header__list {
         height: 55px;
         gap: 0 16px;
@@ -362,6 +363,12 @@ p-tiser
             img  {
                 width: auto;
                 height: 50px;
+                margin: 0 auto;
+            }
+            figcaption {
+                font-size: 10px;
+                text-align: center;
+                line-height: 1.4;
             }
         }
     }
@@ -570,7 +577,7 @@ p-tiser
         .access-grid03 {
             display: grid;
             grid-template-columns: 31% 3.5% 31% 3.5% 31%;
-            grid-template-rows: 40px 120px 40px 120px 40px;
+            grid-template-rows: 40px 120px 90px 120px 40px;
             grid-column-gap: 0px;
             grid-row-gap: 0px;
             div { width: 100%;}
@@ -589,7 +596,7 @@ p-tiser
             .div13 { grid-area: 5 / 1 / 6 / 6; }
             @include inc.mq(tab) {
                 display: grid;
-                grid-template-columns: 7% 50% 7% 29% 7%;
+                grid-template-columns: 7% 40% 17% 29% 7%;
                 grid-template-rows: 140px 30px 140px 30px 140px;
                 grid-column-gap: 0px;
                 grid-row-gap: 0px;
@@ -641,12 +648,40 @@ p-tiser
             }
         }
         .tate {
+            position: relative;
             border: 1px solid inc.$color-blk;
             margin-left: auto;
             margin-right: auto;
             display:flex; flex-direction:column; justify-content:center; align-items:center;
             @include inc.mq(tab) {
                 writing-mode: vertical-rl;
+            }
+            div {
+                writing-mode: horizontal-tb;
+                width: 100%;
+                text-align: center;
+                font-size: 12px;
+                margin-top: 6px;
+                margin-left: -28px;
+                @include inc.mq(tab) {
+                    @include inc.sizingRem(font-size, wide, 14px, tab, 13px);
+                    width: auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin-top: 60px;
+                    @include inc.sizing(margin-left, vr, -10px, tab, -2px);
+                    a span {
+                        margin-left: 22px;
+                    }
+                    a span:before {
+                        width: 12px;
+                        height: 9px;
+                        left: -18px;
+                        margin-top: 1px;
+                    }
+                }
             }
         }
         .title_train, .title_car {
@@ -687,5 +722,38 @@ p-tiser
                 background: url(../img/tiser/car.svg) no-repeat 50% 50%;
             }
         }
+    }
+}
+
+
+
+#privacypolicy {
+    padding-top: 320px;
+    @include inc.sizing(padding-top, tab, 360px, spl, 320px);
+    @include inc.mq(tab) {
+        @include inc.sizing(padding-top, vr, 480px, tab, 360px);
+    }
+}
+
+
+.l-logo {
+    position: absolute;
+    width: 40vw;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    img {
+        width: 100%;
+        height: auto;
+    }
+    @include inc.mq(spl) {
+        width: 30vw;
+        top: 110px;
+    }
+    @include inc.mq(tab) {
+        width: 12.82vw;
+        left: 2.564vw;
+        top: 50px;
+        transform: translate(0, 0);
     }
 }

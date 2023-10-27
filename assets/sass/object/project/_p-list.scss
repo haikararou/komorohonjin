@@ -99,6 +99,7 @@ p-list
       dd {
         line-height: 2;
         @include inc.mq(tab) {
+          width: 72%;
           //width: 80%;
         }
       }
