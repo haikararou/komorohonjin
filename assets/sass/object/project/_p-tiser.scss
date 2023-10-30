@@ -253,7 +253,7 @@ p-tiser
         .reserve-box {
             border: 1px solid inc.$color-blk;
             text-align: center;
-            padding: 0 0 20px;
+            //padding: 0 0 20px;
             h2 {
                 border-bottom: 1px solid inc.$color-blk;
                 line-height: 1;
@@ -261,7 +261,8 @@ p-tiser
                 padding: 20px;
             }
             h3 {
-                margin: 24px 0 18px;
+                //margin: 24px 0 18px;
+                margin: 24px 0 0px;
                 line-height: 1;
                 span {
                     position: relative;
@@ -755,5 +756,36 @@ p-tiser
         left: 2.564vw;
         top: 50px;
         transform: translate(0, 0);
+    }
+}
+
+
+.menu-flex {
+    & + .menu-flex {
+        margin-top: 60px;
+        @include inc.mq(tab) {
+            margin-top: 120px;
+        }
+    }
+}
+
+.empty {
+    margin-top: 0!important;
+}
+
+
+
+.-dinner {
+    .p-period {
+        color: inc.$color-wht;
+        line-height: 1;
+        background: inc.$color-blu;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        padding: 1rem 3rem;
+        @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+        letter-spacing: .1rem;
     }
 }

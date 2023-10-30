@@ -138,9 +138,9 @@ c-text
 }
 
 .p-title-M {
-  margin: 0 0 40px;
+  margin: 0 0 30px;
   @include inc.mq(tab) {
-    margin: 0 0 80px;
+    margin: 0 0 60px;
   }
   .p-title-01 {
     @include inc.sizingRem(font-size, wide, 40px, spl, 24px);
@@ -150,9 +150,17 @@ c-text
       font-style: normal;
       @include inc.sizingRem(font-size, wide, 20px, spl, 14px);
       display: block;
+      margin: 0 0 10px;
+      @include inc.mq(tab) {
+        margin: 0 0 20px;
+      }
     }
   }
   .p-title-02 {
     @include inc.sizingRem(font-size, wide, 20px, spl, 14px);
+    margin: 0 0 10px;
+    @include inc.mq(tab) {
+      margin: 0 0 20px;
+    }
   }
 }
