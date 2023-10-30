@@ -71,13 +71,18 @@ p + p {
     }
   }
   & + .p-text-box {
-    @include inc.sizing(margin-top, wide, 80px, spl, 30px);
+    //@include inc.sizing(margin-top, wide, 80px, spl, 30px);
+    margin-top: 3vw;
+    @include inc.mq(tab) {
+      margin-top: 1vw;
+    }
   }
 }
 
 .p-conts {
   & + .p-conts {
-    @include inc.sizing(margin-top, wide, 40px, spl, 24px);
+    //@include inc.sizing(margin-top, wide, 40px, spl, 24px);
+    margin-top: 3rem;
   }
 }
 

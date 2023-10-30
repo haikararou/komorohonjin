@@ -118,7 +118,12 @@ c-text
 
 
 .p-title-L {
-    margin: 0 0 80px;
+    //margin: 0 0 80px;
+    margin: 0 0 40px;
+    @include inc.sizing(margin-bottom, tab, 48px, spl, 40px);
+    @include inc.mq(tab) {
+      @include inc.sizing(margin-bottom, vr, 80px, tab, 64px);
+    }
   .p-title-01 {
     @include inc.sizingRem(font-size, wide, 70px, spl, 35px);
     span {

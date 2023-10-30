@@ -23,12 +23,15 @@ p-tiser
         left: auto;
         background: none;
         width: auto;
-        right: 2.564vw;
-        top: 10px;
+        //right: 2.564vw;
+        right: 3.25rem;
+        //top: 10px;
+        top: 26px;
         justify-content: end;
         .p-header__list {
             height: 55px;
-            gap: 0 40px;
+            //gap: 0 40px;
+            gap: 0 1.75rem;
             li {
                 height: 55px;
             }
@@ -45,7 +48,7 @@ p-tiser
         figure {
             @include inc.sizing(margin-top, vr, -40px, spl, -30px);
             text-align: center;
-            @include inc.sizing(width, vr, 380px, spl, 222px);
+            @include inc.sizing(width, vr, 340px, spl, 222px);
             img {
                 width: 100%;
                 height: auto;
@@ -55,7 +58,7 @@ p-tiser
                 font-weight: 700;
                 font-style: normal;
                 @include inc.sizingRem(font-size, wide, 27px, spl, 16px);
-                @include inc.sizing(margin-top, vr, 32px, spl, 12px);
+                @include inc.sizing(margin-top, vr, 48px, spl, 24px);
                 line-height: 1;
             }
         }
@@ -141,12 +144,14 @@ p-tiser
     }
     h2 {
         @include inc.sizingRem(font-size, wide, 50px, spl, 24px);
+        letter-spacing: .3rem;
         @include inc.mq(tab) {
             text-align: center
         }
     }
     h3 {
         @include inc.sizingRem(font-size, wide, 20px, spl, 17px);
+        letter-spacing: .1rem;
         margin-top: 30px;
         @include inc.sizing(margin-bottom, vr, 60px, spl, 40px);
         @include inc.mq(tab) {
@@ -159,9 +164,9 @@ p-tiser
     &__menu {
         dl {
             .-flx + .-flx {
-                margin-top: 40px!important;
+                margin-top: 3rem!important;
                 @include inc.mq(vr) {
-                    margin-top: 80px!important;
+                    margin-top: 3rem!important;
                 }
             }
             dt {
@@ -220,9 +225,9 @@ p-tiser
                     }
                 }
                 * + ul {
-                    margin-top: 10px;
+                    margin-top: 0.5rem;
                     @include inc.mq(vr) {
-                        margin-top: 30px;
+                        margin-top: 0.5rem;
                     }
                 }
             }
@@ -238,6 +243,9 @@ p-tiser
         }
         &.-dinner {
             dl {
+                dt {
+                    color: inc.$color-blu;
+                }
                 dd {
                     ul {
                         li:before {
@@ -262,7 +270,10 @@ p-tiser
             }
             h3 {
                 //margin: 24px 0 18px;
-                margin: 24px 0 0px;
+                margin: 32px 0 30px;
+                @include inc.mq(tab) {
+                    margin: 32px 0 30px;
+                }
                 line-height: 1;
                 span {
                     position: relative;
@@ -434,7 +445,10 @@ p-tiser
                 }
             }
             .map_add {
-                padding-right: 10vw;
+                padding-right: 0;
+                @include inc.mq(tab) {
+                    padding-right: 10vw;
+                }
                 //margin-top: 140px;
                 dl {
                     margin-bottom: 50px;
@@ -473,6 +487,12 @@ p-tiser
                 }
                 p {
                     @include inc.sizing(padding-left, vr, 32px, spl, 24px);
+                    br {
+                        display: none;
+                        @include inc.mq(tab) {
+                            display: block;
+                        }
+                    }
                 }
             }
         }
@@ -480,8 +500,14 @@ p-tiser
             display: none!important;
         }
         .l-main__right2 {
+            border-top: 1px solid inc.$color-brd01;
             width: 100%!important;
-            margin-top: 80px;
+            margin-top: 40px;
+            padding-top: 40px;
+            @include inc.mq(vr) {
+                margin-top: 80px;
+                padding-top: 0;
+            }
             dl {
                 dt {
                     width: 100%!important;
@@ -694,7 +720,8 @@ p-tiser
                     padding-right: 3rem;
                 }
             }
-            @include inc.sizing(margin-bottom, vr, 40px, spl, 20px);
+            //@include inc.sizing(margin-bottom, vr, 40px, spl, 20px);
+            margin-bottom: 2rem;
             span {
                 display: block;
                 line-height: 2;
@@ -702,7 +729,7 @@ p-tiser
                 @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
                 @include inc.mq(vr) {
                     margin-top: 0;
-                    display: inline;
+                    display: block;
                     //padding-left: 3rem;
                 }
             }

@@ -12,7 +12,10 @@ p-list
       line-height: 2;
       margin: 0;
       & + li {
-        margin-top: .8rem;
+        margin-top: .3rem;
+        @include inc.mq(tab) {
+          margin-top: .8rem;
+        }
       }
     }
     li:before {
@@ -86,11 +89,13 @@ p-list
       & + .-flx {
         margin-top: 2rem;
         @include inc.mq(tab) {
-          margin-top: 1.2rem;
+          //margin-top: 1.2rem;
+          margin-top: 2rem;
         }
       }
       dt {
-        line-height: 2;
+        font-weight: 600;
+        line-height: 2rem;
         @include inc.mq(tab) {
           width: 28%;
           padding-right: 3rem;
@@ -104,7 +109,7 @@ p-list
         }
       }
       dt + dd {
-        margin-top: 10px;
+        margin-top: 0.3rem;
         @include inc.mq(tab) {
           margin-top: 0;
         }
