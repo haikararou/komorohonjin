@@ -1,0 +1,57 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+p-footer
+-----------------------------------------------------*/
+.p-footer {
+  padding: 0 2.564vw 0;
+  @include inc.sizing(padding-top, wide, 160px, spl, 50px);
+  @include inc.sizing(padding-bottom, wide, 160px, spl, 50px);
+  small {
+    text-align: center;
+    @include inc.mq(tabl) {
+      text-align: left;
+    }
+    display: block;
+    @include inc.sizingRem(font-size, wide, 12px, spl, 10px);
+    font-family: p22-mackinac-pro, serif;
+    font-weight: 700;
+    font-style: normal;
+    color: inc.$color-gry;
+    a {
+      text-decoration: underline;
+      text-underline-offset: 0.2rem;
+      @include inc.sizingRem(font-size, wide, 12px, spl, 10px);
+      font-family: p22-mackinac-pro, serif;
+      font-weight: 700;
+      font-style: normal;
+      color: inc.$color-gry;
+    }
+  }
+  &__bottom {
+    width: 100%;
+    //height: 983px;
+    @include inc.sizing(height, wide, 983px, tabl, 700px);
+    background: url(../img/common/bottom.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    display:flex; flex-direction:column; justify-content:center; align-items:center;
+    @include inc.sizingRem(font-size, wide, 40px, spl, 20px);
+    color: inc.$color-wht;
+    line-height: 2.6;
+    a {
+      color: inc.$color-wht;
+      font-family: p22-mackinac-pro, serif;
+      font-weight: 700;
+      font-style: normal;
+      @include inc.sizingRem(font-size, wide, 20px, spl, 14px);
+      &.c-link.-blankB {
+        span:before {
+          background: url(../img/common/arw_wht.svg) no-repeat 50% 50%;
+        }
+      }
+    }
+  }
+}
+
+
+

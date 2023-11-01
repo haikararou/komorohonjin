@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+@use "../inc/" as inc;
+/*
+l-logo
+-----------------------------------------------------*/
+.l-logo {
+    position: absolute;
+    top: 50px;
+    left: 2.564vw;
+    width: 12.82vw;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

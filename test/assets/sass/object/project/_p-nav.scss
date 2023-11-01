@@ -1,0 +1,173 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+p-nav
+-----------------------------------------------------*/
+
+
+
+.p-nav {
+    &__inner {
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: space-between;
+        &---logo {
+            //width: 12.82vw;
+            // @include inc.mq(tabl) {
+            //     @include inc.sizing(width, wide, 250px, lap, 200px);
+            // }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &---navi {
+            //width: 33.33vw;
+            // @include inc.mq(tabl) {
+            //     width: 650px;
+            //     @include inc.sizing(width, vr, 650px, lap, 550px);
+            // }
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &---grid {
+            @include inc.mq(min) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+            }
+            // @include inc.mq(tabl) {
+            //     .grid1 { grid-area: 1 / 1 / 2 / 2; /*width: 20.51vw;*/ width: 400px; @include inc.sizing(width, vr, 400px, lap, 300px);}
+            //     .grid2 { grid-area: 2 / 1 / 3 / 2; /*width: 20.51vw;*/ width: 400px; @include inc.sizing(width, vr, 400px, lap, 300px); margin-top: 40px;}
+            //     .grid3 { grid-area: 1 / 2 / 2 / 3; /*width: 12.82vw;*/ width: 250px;}
+            //     .grid4 { grid-area: 2 / 2 / 3 / 3; /*width: 12.82vw;*/ width: 250px; margin-top: 40px;}
+            // }
+            dl {
+                dt {
+                    @include inc.sizingRem(font-size, wide, 14px, spl, 12px);
+                    font-family: p22-mackinac-pro, serif;
+                    font-weight: 700;
+                    font-style: normal;
+                    color: inc.$color-gry;
+                    @include inc.sizing(margin-bottom, tab, 30px, spl, 20px);
+                }
+                dd {
+                    address {
+                        font-style: normal;
+                    }
+                    p {
+                        line-height: 2;
+                        & + p {
+                            margin-top: 6px;
+                        }
+                        .-tel {
+                            letter-spacing: .12rem;
+                        }
+                        .-time {
+                            @include inc.sizingRem(font-size, wide, 14px, spl, 12px);
+                            letter-spacing: .12rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.p-footer {
+    .p-nav {
+        &__inner {
+            display: block;
+            @include inc.mq(tabl) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            &---logo {
+                @include inc.sizing(width, tabl, 200px, spl, 150px);
+                margin: 0 auto 100px;
+                @include inc.mq(tabl) {
+                    margin: 0;
+                    @include inc.sizing(width, wide, 250px, lap, 200px);
+                }
+            }
+            &---navi {
+                margin: 0 auto 80px;
+                width: 80%;
+                @include inc.mq(spl) {
+                    @include inc.sizing(width, min, 350px, spl, 300px);
+                }
+                @include inc.mq(min) {
+                    @include inc.sizing(width, tabl, 550px, min, 550px);
+                }
+                @include inc.mq(tabl) {
+                    margin: 0;
+                    //width: 650px;
+                    @include inc.sizing(width, vr, 650px, lap, 550px);
+                }
+            }
+            &---grid {
+                .grid1 {}
+                .grid2 { margin-top: 30px;}
+                .grid3 { margin-top: 30px;}
+                .grid4 { margin-top: 30px;}
+                @include inc.mq(min) {
+                    .grid1 { grid-area: 1 / 1 / 2 / 2; @include inc.sizing(width, tabl, 300px, min, 300px);}
+                    .grid2 { grid-area: 2 / 1 / 3 / 2; @include inc.sizing(width, tabl, 300px, min, 300px); margin-top: 40px;}
+                    .grid3 { grid-area: 1 / 2 / 2 / 3; width: 250px; margin-top: 0;}
+                    .grid4 { grid-area: 2 / 2 / 3 / 3; width: 250px; margin-top: 40px;}
+                }
+                @include inc.mq(tabl) {
+                    .grid1 { @include inc.sizing(width, vr, 400px, lap, 300px);}
+                    .grid2 { @include inc.sizing(width, vr, 400px, lap, 300px); margin-top: 40px;}
+                    .grid3 { width: 250px;}
+                    .grid4 { width: 250px; margin-top: 40px;}
+                }
+            }
+            // @include inc.mq(tabl) {
+            //     display: block;
+            //     &---logo {
+            //         @include inc.sizing(width, tabl, 200px, spl, 150px);
+            //         margin: 0 auto 100px;
+            //     }
+            //     &---navi {
+            //         @include inc.sizing(width, tabl, 550px, min, 550px);
+            //     }
+            //     &---grid {
+            //         .grid1 { @include inc.sizing(width, tabl, 300px, min, 300px);}
+            //         .grid2 { @include inc.sizing(width, tabl, 300px, min, 300px); margin-top: 40px;}
+            //         .grid3 { width: 250px;}
+            //         .grid4 { width: 250px; margin-top: 40px;}
+            //     }
+            // }
+        }
+    }
+}
+
+
+// .l-nav {
+//     .p-nav {
+//         &__inner {
+//             &---logo {
+//                 position: absolute;
+//                 right: 50px;
+//                 bottom: 50px;
+//                 @include inc.sizing(width, wide, 280px, lap, 180px);
+//             }
+//             &---navi {
+//                 @include inc.sizing(width, vr, 650px, lap, 500px);
+//                 @include inc.sizing(width, wide, 650px, vr, 650px);
+//                 position: absolute;
+//                 left: 50px;
+//                 bottom: 50px;
+//             }
+//             &---grid {
+//                 .grid1 { @include inc.sizing(width, wide, 400px, lap, 250px);}
+//                 .grid2 { @include inc.sizing(width, wide, 400px, lap, 250px);}
+//             }
+//         }
+//     }
+// }
