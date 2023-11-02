@@ -8,11 +8,9 @@ l-main
     padding: 0 7.5vw;
     @include inc.sizing(padding-bottom, tab, 100px, spl, 50px);
     @include inc.mq(tab) {
-        //padding: 0 2.564vw;
         padding: 0 3.25vw;
         @include inc.sizing(padding-bottom, wide, 160px, tab, 100px);
     }
-    //@include inc.sizing(padding-bottom, wide, 160px, spl, 50px);
     & + .l-main {
         @include inc.sizing(padding-top, wide, 160px, spl, 50px);
     }
@@ -83,13 +81,6 @@ l-main
         }
         .c-title {
             line-height: 1.4;
-            // span {
-            //     font-family: dnp-shuei-gothic-gin-std, sans-serif;
-            //     font-weight: 600;
-            //     font-style: normal;
-            //     @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
-            //     display: block;
-            // }
         }
     }
     &__right2 {
@@ -230,24 +221,24 @@ l-main
         border: 1px solid inc.$color-brd01;
         padding: 5vw;
         @include inc.mq(tab) {
-            padding: 30px 30px;
+            //padding: 30px 30px;
+            padding: 1.6vw 1.6vw
         }
         @include inc.mq(desk) {
-            padding: 30px 50px;
+            //padding: 30px 50px;
+            padding: 1.6vw 2.6vw
         }
     }
 }
 
 .-narrow {
     @include inc.mq(desk) {
-        //width: 56%;
         width: 33.33vw;
     }
 }
 
 .column01-center {
     margin: 0 auto;
-    // max-width: 556px;
     @include inc.mq(tab) {
         max-width: 28.21vw;
     }

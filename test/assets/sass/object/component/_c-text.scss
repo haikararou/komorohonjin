@@ -15,7 +15,8 @@ c-text
     @include inc.sizingRem(font-size, wide, 30px, spl, 20px);
     //margin: 0 0 2rem;
     & + * {
-      margin-top: 2rem;
+      //margin-top: 2rem;
+      margin-top: 1.7vw;
     }
   }
   &.-M {

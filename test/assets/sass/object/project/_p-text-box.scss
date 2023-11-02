@@ -72,10 +72,10 @@ p + p {
   }
   & + .p-text-box {
     //@include inc.sizing(margin-top, wide, 80px, spl, 30px);
-    margin-top: 3vw;
-    @include inc.mq(tab) {
-      margin-top: 1vw;
-    }
+    margin-top: 5vw;
+    // @include inc.mq(tab) {
+    //   margin-top: 1vw;
+    // }
   }
 }
 

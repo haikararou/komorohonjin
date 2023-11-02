@@ -25,7 +25,6 @@ l-nav
         margin: 0;
         padding: 0;
         @include inc.sizing(width, wide, 180px, lap, 140px);
-        //width: 9.5vw;
         text-align: right;
         position: absolute;
         right: 50px;
@@ -100,9 +99,9 @@ l-nav
                 }
                 li {
                     a {
-                      @include inc.sizingRem(font-size, tab, 18px, spl, 14px);
+                        @include inc.sizingRem(font-size, tab, 18px, spl, 14px);
                     }
-                  }
+                }
                 li + li {
                     &:before {
                         left: -2.3vw;
@@ -136,12 +135,6 @@ l-nav
                 left: 50px;
                 bottom: 50px;
             }
-            // &---grid {
-            //     .grid1 { @include inc.sizing(width, tabl, 300px, min, 300px);}
-            //     .grid2 { @include inc.sizing(width, tabl, 300px, min, 300px); margin-top: 40px;}
-            //     .grid3 { width: 250px;}
-            //     .grid4 { width: 250px; margin-top: 40px;}
-            // }
             &---grid {
                 .grid1 {}
                 .grid2 { margin-top: 30px;}
