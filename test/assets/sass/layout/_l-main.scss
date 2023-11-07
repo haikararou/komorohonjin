@@ -3,6 +3,17 @@
 /*
 l-main
 -----------------------------------------------------*/
+main {
+    overflow: hidden;
+}
+
+.sub .l-main {
+    padding-top: 20vw;
+    @include inc.mq(tab) {
+        padding-top: 0;
+    }
+}
+
 .l-main {
     border-bottom: 1px solid inc.$color-brd02;
     padding: 0 7.5vw;
@@ -53,12 +64,47 @@ l-main
         }
         &---lead {
             margin: 0 0 30px;
+            nav {
+                position: relative;
+                padding: 1.5rem 0;
+                &:before,
+                &:after {
+                    content: "";
+                    width: 100vw;
+                    display: block;
+                    height: 1px;
+                    background: inc.$color-brd02;
+                    position: absolute;
+                }
+                &:before {
+                    top: 0;
+                    left: -7.5vw;
+                }
+                &:after {
+                    bottom: 0;
+                    left: -7.5vw;
+                }
+                @include inc.mq(tab) {
+                    padding: 0;
+                    &:before,
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
             @include inc.mq(tab) {
                 margin: 0 0 12px;
+            }
+            p + p {
+                @include inc.sizing(margin-top, wide, 16px, spl, 10px);
             }
         }
         &---thumb {
             @include inc.sizing(margin-top, wide, 120px, spl, 60px);
+            figcaption {
+                @include inc.sizingRem(font-size, wide, 14px, spl, 12px);
+                margin-top: 1rem;
+            }
         }
     }
     &__right {
@@ -272,3 +318,23 @@ l-main
     }
 }
 
+
+
+#PrivacyPolicy,
+#Faq {
+    .l-main__right {
+        padding-top: 56px;
+        @include inc.mq(tab) {
+            padding-top: 34vw;
+        }
+    }
+}
+
+
+.separate {
+    & + .separate {
+        border-top: 1px solid inc.$color-brd03;
+        @include inc.sizing(margin-top, wide, 100px, spl, 56px);
+        @include inc.sizing(padding-top, wide, 100px, spl, 56px);
+    }
+}

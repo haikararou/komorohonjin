@@ -780,6 +780,10 @@ c-text
   }
 }
 
+.-colorBwn {
+  color: #7E7257;
+}
+
 .p-title-L {
   margin: 0 0 40px;
   margin-bottom: clamp(40px, 3.23vw + 23.2px, 48px);

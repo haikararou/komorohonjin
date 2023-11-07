@@ -91,8 +91,8 @@ c-text
     }
   }
 }
-.c-text {
-}
+
+
 
 .-eng {
   font-family: p22-mackinac-pro, serif;
@@ -114,6 +114,10 @@ c-text
   @include inc.mq(vr) {
     width: 32vw;
   }
+}
+
+.-colorBwn {
+  color: inc.$color-bwn;
 }
 
 
@@ -169,3 +173,9 @@ c-text
     }
   }
 }
+
+
+
+
+
+

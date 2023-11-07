@@ -1,0 +1,258 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+p-lunch
+-----------------------------------------------------*/
+#Lunch #main {
+    padding-top: 180px;
+}
+
+.-positionEnd {
+    @include inc.mq(tab) {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding-bottom: 3rem;
+    }
+}
+
+.-smallMenu {
+    margin: 48px 0;
+    @include inc.mq(tab) {
+        @include inc.sizing(margin-top, vr, 160px, tab, 124px);
+        @include inc.sizing(margin-bottom, vr, 80px, tab, 64px);
+    }
+    h2 {
+        @include inc.sizingRem(font-size, wide, 16px, spl, 12px);
+        @include inc.sizing(margin-bottom, vr, 32px, tab, 30px);
+    }
+    dl {
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+            &:before {
+                content: "";
+                display: block;
+                height: 2px;
+                background: linear-gradient(to right, #000, #000 2px, transparent 1px, transparent 1px) repeat-x left bottom / 6px 2px;
+                width: 100%;
+                position: absolute;
+                top: 1.15rem;
+                z-index: -1;
+            }
+            dt {
+                padding-right: 1rem;
+                @include inc.sizing(padding-left, vr, 35px, spl, 24px);
+                background: url(../img/common/arw_bwn.svg) no-repeat 0 .8rem inc.$color-wht;
+                @include inc.sizing(background-size, vr, 16px, spl, 10px);
+                @include inc.sizingRem(font-size, wide, 24px, spl, 18px);
+                span {
+                    display: block;
+                    @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+                }
+            }
+            dd {
+                padding: .5rem 0 0 1rem;
+                @include inc.sizingRem(font-size, wide, 16px, spl, 12px);
+                background: inc.$color-wht;
+            }
+            & + div {
+                @include inc.sizing(margin-top, vr, 30px, spl, 28px);
+            }
+        }
+    }
+}
+
+.-menu {
+    dl {
+        .-flx + .-flx {
+            margin-top: 3rem!important;
+            @include inc.mq(vr) {
+                margin-top: 3rem!important;
+            }
+        }
+        dt {
+            color: inc.$color-bwn;
+            @include inc.sizingRem(font-size, wide, 20px, spl, 14px);
+            font-family: p22-mackinac-pro, serif;
+            font-weight: 700;
+            font-style: normal;
+            width: 100%!important;
+            @include inc.mq(vr) {
+                width: 28%!important;
+            }
+            span {
+                display: block;
+                @include inc.sizingRem(font-size, wide, 16px, spl, 12px);
+            }
+        }
+        dt + dd {
+            margin-top: 10px!important;
+            @include inc.mq(vr) {
+                margin-top: 0!important;
+            }
+        }
+        dd {
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    list-style-type: none; /*点を非表示*/
+                    position: relative; /*基準位置*/
+                    padding-left: 2em;
+                    line-height: 2;
+                    margin: 0;
+                    & + li {
+                        margin-top: .6rem;
+                    }
+                    @include inc.mq(vr) {
+                        padding-left: 1.8em;
+                        & + li {
+                            margin-top: .8rem;
+                        }
+                    }
+                }
+                li:before {
+                    content: "";
+                    display: block;
+                    width: 15px; /*点の幅*/
+                    height: 15px; /*点の高さ*/
+                    border-radius: 50%; /*丸くする*/
+                    background: inc.$color-bwn; /*点の色*/
+                    position: absolute; /*絶対配置*/
+                    left: .2em; /*点の位置*/
+                    top: .55rem;
+                    @include inc.mq(vr) {
+                        width: 20px; /*点の幅*/
+                        height: 20px; /*点の高さ*/
+                        left: .2em; /*点の位置*/
+                        top: .4rem;
+                    }
+                }
+            }
+            * + ul {
+                margin-top: 0.5rem;
+                @include inc.mq(vr) {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+    .menu-info {
+        border: 1px solid inc.$color-brd02;
+        margin-top: 20px;
+        padding: 15px;
+        @include inc.mq(tab) {
+            margin-top: 80px;
+            padding: 30px;
+        }
+    }
+    &.-dinner {
+        dl {
+            dt {
+                color: inc.$color-blu;
+            }
+            dd {
+                ul {
+                    li:before {
+                        background: inc.$color-blu; /*点の色*/
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .p-header {
+//     background: inc.$color-bg01;
+//     width: auto;
+//     right: 0;
+//     left: 0;
+//     top: 0px;
+//     height: 55px;
+//     justify-content: center;
+//     z-index: 99;
+//     .p-header__list {
+//         height: 55px;
+//         gap: 0 16px;
+//         li {
+//             height: 55px;
+//         }
+//     }
+//     @include inc.mq(tab) {
+//         left: auto;
+//         background: none;
+//         width: auto;
+//         //right: 2.564vw;
+//         right: 3.25rem;
+//         //top: 10px;
+//         top: 26px;
+//         justify-content: end;
+//         .p-header__list {
+//             height: 55px;
+//             //gap: 0 40px;
+//             gap: 0 1.75rem;
+//             li {
+//                 height: 55px;
+//             }
+//         }
+//     }
+// }
+
+
+.tabPeriod {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        a {
+            display: block;
+            background: inc.$color-beg;
+            color: inc.$color-bwn2;
+            @include inc.sizingRem(font-size, wide, 16px, spl, 12px);
+            padding:1rem 3rem;
+            line-height: 1;
+            cursor: pointer;
+        }
+        &.active a {
+            background: inc.$color-bwn;
+            color: inc.$color-wht;
+        }
+        & + li {
+            margin-left: 6px;
+        }
+    }
+}
+
+
+
+/*エリアの表示非表示と形状*/
+.areaPeriod {
+    display: none;/*はじめは非表示*/
+    opacity: 0;/*透過0*/
+    background: #fff;
+    padding:50px 20px;
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+.areaPeriod.is-active {
+    display: block!important;/*表示*/
+    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -17,7 +17,6 @@ p-pagenav
     a {
         transition: .5s;
         text-decoration: none!important;
-        // text-underline-offset:0.9em;
         border: none;
         display: inline-block;
         border: 1px solid inc.$color-wht;
@@ -94,7 +93,6 @@ p-pagenav
                 text-align: center;
                 padding: 0 0 .5rem;
                 line-height: 1;
-                //text-decoration: none;
             }
         }
     }

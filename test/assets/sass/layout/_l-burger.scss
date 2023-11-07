@@ -14,9 +14,13 @@ l-burger
     background-size: contain;
     position: fixed;
     top: 68px;
-    @include inc.sizing(top, desk, 66px, spl, 68px);
-    @include inc.sizing(top, vr, 60px, desk, 66px);
-    right: 2.564vw;
+    // @include inc.sizing(top, desk, 66px, spl, 68px);
+    // @include inc.sizing(top, vr, 60px, desk, 66px);
+    top: 20px;
+    @include inc.mq(tab) {
+        @include inc.sizing(top, vr, 60px, tab, 66px);
+    }
+    right: 3.25vw;
     cursor: pointer;
     z-index: 11;
 }
