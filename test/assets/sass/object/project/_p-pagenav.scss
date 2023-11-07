@@ -4,96 +4,88 @@
 p-pagenav
 -----------------------------------------------------*/
 .wp-pagenavi {
+    font-family: p22-mackinac-pro, serif;
+    font-weight: 700;
+    font-style: normal;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .5rem;
-    @include inc.sizing(padding-top, wide, 80px, spl, 48px);
+    margin: 0 auto;
+    position: relative;
+    //@include inc.sizing(padding-top, wide, 80px, spl, 48px);
     @include inc.mq(min) {
         gap: 1rem;
     }
-    span,
-    a {
+    .current,
+    .page {
         transition: .5s;
         text-decoration: none!important;
         border: none;
         display: inline-block;
-        border: 1px solid inc.$color-wht;
-        @include inc.sizing(width, wide, 64px, tabl, 32px);
-        @include inc.sizing(height, wide, 64px, tabl, 32px);
+        width: 27px;
+        height: 27px;
         line-height: 1;
         display:flex; flex-direction:column; justify-content:center; align-items:center;
-        background: inc.$color-wht;
-        &.previouspostslink,
-        &.nextpostslink {
-            position: relative;
-            color: transparent;
-            @include inc.sizing(width, wide, 64px, tabl, 32px);
-            @include inc.sizing(height, wide, 64px, tabl, 32px);
-            line-height: 1;
-            text-indent: -9999;
-            font-size: 0;
-            line-height: 0;
-            &:before {
-                content: "";
-                position: absolute;
-                top: calc(50% - 3px);
-                left: calc(50% - 3px);
-                width: 6px;
-                height: 6px;
-                transform: rotate(45deg);
-            }
-        }
-        &.previouspostslink:before {
-        }
-        &.nextpostslink:before {
-        }
-        &:hover {
-            color: inc.$color-wht;
-        }
-        &.previouspostslink:hover:before {
-            border-bottom: 2px solid inc.$color-wht;
-            border-left: 2px solid inc.$color-wht;
-        }
-        &.nextpostslink:hover:before {
-            border-top: 2px solid inc.$color-wht;
-            border-right: 2px solid inc.$color-wht;
-        }
         &.current {
-            color: inc.$color-wht;
-            border: none;
+            border-bottom: 1px solid inc.$color-blk;
+        }
+    }
+    .previouspostslink,
+    .nextpostslink {
+        position: relative;
+        width: 180px;
+        @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+        line-height: 1;
+        &:before, &:after {
+            content: "";
+            display: block;
+            width: 9px;
+            height: 28px;
+            background: url(../img/common/brackets_blk.svg) no-repeat 50% 50%;
+            background-size: contain;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0%, -50%);
+        }
+        &:after {
+            left: auto;
+            right: 0;
+            top: 50%;
+            transform: translate(0%, -50%) rotate(180deg);
         }
     }
 }
 
-.wp-pager {
-    @include inc.sizing(padding-top, wide, 32px, spl, 16px);
-    ul {
-        position: relative;
-        clear: both;
-        overflow: hidden;
-        height: 2rem;
-        li {
-            position: absolute;
-            top: 0;
-            list-style-type: none;
-            line-height: 1;
-            &.prev {
-                left: 0;
-            }
-            &.center {
-                left: 50%;
-                transform: translate(-50%, 0%);
-            }
-            &.next {
-                right: 0;
-            }
-            a {
-                text-align: center;
-                padding: 0 0 .5rem;
-                line-height: 1;
-            }
-        }
-    }
-}
+// .wp-pager {
+//     @include inc.sizing(padding-top, wide, 32px, spl, 16px);
+//     ul {
+//         position: relative;
+//         clear: both;
+//         overflow: hidden;
+//         height: 2rem;
+//         li {
+//             position: absolute;
+//             top: 0;
+//             list-style-type: none;
+//             line-height: 1;
+//             &.prev {
+//                 left: 0;
+//             }
+//             &.center {
+//                 left: 50%;
+//                 transform: translate(-50%, 0%);
+//             }
+//             &.next {
+//                 right: 0;
+//             }
+//             a {
+//                 text-align: center;
+//                 padding: 0 0 .5rem;
+//                 line-height: 1;
+//             }
+//         }
+//     }
+// }

@@ -16,6 +16,13 @@ p-lunch
         padding-bottom: 3rem;
     }
 }
+.-positionEnd2 {
+    @include inc.mq(tab) {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+}
 
 .-smallMenu {
     margin: 48px 0;

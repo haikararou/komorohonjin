@@ -329,6 +329,17 @@ main {
         }
     }
 }
+#News {
+    .l-main__left {
+        display: flex;
+    }
+    .l-main__right {
+        padding-top: 56px;
+        @include inc.mq(tab) {
+            padding-top: 188px;
+        }
+    }
+}
 
 
 .separate {
