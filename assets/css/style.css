@@ -3113,6 +3113,7 @@ p-tiser
 .p-tiser__reserve .reserve-box {
   border: 1px solid #000;
   text-align: center;
+  padding-bottom: clamp(30px, 0.26vw + 28.7px, 32px);
 }
 .p-tiser__reserve .reserve-box h2 {
   border-bottom: 1px solid #000;
@@ -4539,6 +4540,41 @@ p-tiser
 .menu_ph img {
   width: 100%;
   height: auto;
+}
+
+.-small {
+  display: block;
+  font-size: clamp(0.75rem, 0.19vw + 0.6875rem, 0.875rem);
+  margin-top: clamp(12px, 0.78vw + 6px, 16px);
+}
+
+.mailto {
+  padding: 0 2rem;
+  padding-left: clamp(8px, 1.56vw - 4px, 16px);
+  padding-right: clamp(8px, 1.56vw - 4px, 16px);
+}
+.mailto span {
+  font-size: 12px;
+  font-size: clamp(0.75rem, 0.81vw + 0.4875rem, 0.875rem);
+}
+@media screen and (min-width: 768px) {
+  .mailto span {
+    font-size: clamp(0.75rem, 0.25vw + 0.63125rem, 0.875rem);
+  }
+}
+.mailto a {
+  display: block;
+  -webkit-text-size-adjust: 100%;
+  font-size: 9px;
+}
+.mailto a span {
+  font-size: 12px;
+  font-size: clamp(0.75rem, 0.81vw + 0.4875rem, 0.875rem);
+}
+@media screen and (min-width: 768px) {
+  .mailto a span {
+    font-size: clamp(0.625rem, 0.5vw + 0.3875rem, 0.875rem);
+  }
 }
 
 /* =====================================================

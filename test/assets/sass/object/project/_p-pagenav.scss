@@ -14,7 +14,13 @@ p-pagenav
     gap: .5rem;
     margin: 0 auto;
     position: relative;
-    //@include inc.sizing(padding-top, wide, 80px, spl, 48px);
+    width: 100%;
+    padding-top: 48px;
+    margin-top: 16px;
+    @include inc.mq(tab) {
+        padding-top: 0;
+        @include inc.sizing(margin-top, wide, 145px, tab, 125px);
+    }
     @include inc.mq(min) {
         gap: 1rem;
     }
@@ -34,7 +40,7 @@ p-pagenav
     }
     .previouspostslink,
     .nextpostslink {
-        position: relative;
+        position: absolute;
         width: 180px;
         @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
         line-height: 1;
@@ -56,6 +62,14 @@ p-pagenav
             top: 50%;
             transform: translate(0%, -50%) rotate(180deg);
         }
+    }
+    .previouspostslink {
+        left: 0;
+        top: 0;
+    }
+    .nextpostslink {
+        right: 0;
+        top: 0;
     }
 }
 

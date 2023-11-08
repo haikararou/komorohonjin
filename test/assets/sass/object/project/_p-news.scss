@@ -85,8 +85,14 @@ p-news
         }
         .-indiv {
             width: 100%;
+            margin-bottom: 38px;
+            padding-bottom: 38px;
+            border-bottom: 1px solid inc.$color-brd02;
             @include inc.mq(tab) {
                 width: 30%;
+                margin: 0;
+                padding: 0;
+                border-bottom: none;
             }
             .-fig {
                 margin-bottom: 16px;
@@ -103,17 +109,6 @@ p-news
             .-remarks {
                 @include inc.sizingRem(font-size, wide, 16px, spl, 12px);
             }
-            & + .-indiv {
-                margin-top: 28px;
-                padding-top: 38px;
-                border-top: 1px solid inc.$color-brd02;
-                @include inc.mq(tab) {
-                    margin: 0;
-                    padding: 0;
-                    border-top: none;
-                }
-            }
         }
-
     }
 }

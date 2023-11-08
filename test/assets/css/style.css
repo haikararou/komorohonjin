@@ -2759,6 +2759,15 @@ p-pagenav
   gap: 0.5rem;
   margin: 0 auto;
   position: relative;
+  width: 100%;
+  padding-top: 48px;
+  margin-top: 16px;
+}
+@media screen and (min-width: 768px) {
+  .wp-pagenavi {
+    padding-top: 0;
+    margin-top: clamp(125px, 2.5vw + 105.8px, 145px);
+  }
 }
 @media screen and (min-width: 620px) {
   .wp-pagenavi {
@@ -2795,7 +2804,7 @@ p-pagenav
 }
 .wp-pagenavi .previouspostslink,
 .wp-pagenavi .nextpostslink {
-  position: relative;
+  position: absolute;
   width: 180px;
   font-size: clamp(0.875rem, 0.19vw + 0.8125rem, 1rem);
   line-height: 1;
@@ -2822,6 +2831,14 @@ p-pagenav
   top: 50%;
   -webkit-transform: translate(0%, -50%) rotate(180deg);
           transform: translate(0%, -50%) rotate(180deg);
+}
+.wp-pagenavi .previouspostslink {
+  left: 0;
+  top: 0;
+}
+.wp-pagenavi .nextpostslink {
+  right: 0;
+  top: 0;
 }
 
 /*
@@ -3329,10 +3346,16 @@ p-news
 }
 #News .newsList .-indiv {
   width: 100%;
+  margin-bottom: 38px;
+  padding-bottom: 38px;
+  border-bottom: 1px solid #C1C1C1;
 }
 @media screen and (min-width: 768px) {
   #News .newsList .-indiv {
     width: 30%;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
   }
 }
 #News .newsList .-indiv .-fig {
@@ -3351,18 +3374,6 @@ p-news
 }
 #News .newsList .-indiv .-remarks {
   font-size: clamp(0.75rem, 0.38vw + 0.625rem, 1rem);
-}
-#News .newsList .-indiv + .-indiv {
-  margin-top: 28px;
-  padding-top: 38px;
-  border-top: 1px solid #C1C1C1;
-}
-@media screen and (min-width: 768px) {
-  #News .newsList .-indiv + .-indiv {
-    margin: 0;
-    padding: 0;
-    border-top: none;
-  }
 }
 
 /* =====================================================

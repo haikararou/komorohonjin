@@ -267,6 +267,7 @@ p-tiser
         .reserve-box {
             border: 1px solid inc.$color-blk;
             text-align: center;
+            @include inc.sizing(padding-bottom, vr, 32px, spl, 30px);
             //padding: 0 0 20px;
             h2 {
                 border-bottom: 1px solid inc.$color-blk;
@@ -894,5 +895,38 @@ p-tiser
     img {
         width: 100%;
         height: auto;
+    }
+}
+
+
+
+.-small {
+    display: block;
+    @include inc.sizingRem(font-size, wide, 14px, spl, 12px);
+    @include inc.sizing(margin-top, vr, 16px, tab, 12px);
+}
+.mailto {
+    padding: 0 2rem;
+    @include inc.sizing(padding-left, vr, 16px, tab, 8px);
+    @include inc.sizing(padding-right, vr, 16px, tab, 8px);
+    span {
+        font-size: 12px;
+        @include inc.sizingRem(font-size, tab, 14px, spl, 12px);
+        @include inc.mq(tab) {
+            @include inc.sizingRem(font-size, wide, 14px, tab, 12px);
+        }
+    }
+    a {
+        display: block;
+        -webkit-text-size-adjust: 100%;
+        font-size: 9px;
+        span {
+            font-size: 12px;
+            @include inc.sizingRem(font-size, tab, 14px, spl, 12px);
+            @include inc.mq(tab) {
+                @include inc.sizingRem(font-size, wide, 14px, tab, 10px);
+            }
+        }
+        //@include inc.sizing(margin-top, vr, 16px, tab, 12px);
     }
 }
