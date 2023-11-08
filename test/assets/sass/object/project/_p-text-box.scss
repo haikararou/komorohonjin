@@ -19,6 +19,9 @@ p {
 p + p {
   @include inc.sizing(margin-top, wide, 32px, spl, 16px);
 }
+p + figure {
+  @include inc.sizing(margin-top, wide, 24px, spl, 12px);
+}
 
 * + .-near {
   margin-top: clamp(8px, 0.38vw + 6px, 12px)!important;

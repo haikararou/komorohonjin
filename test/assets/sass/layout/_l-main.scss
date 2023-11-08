@@ -339,8 +339,34 @@ main {
             padding-top: 188px;
         }
     }
+    &.post {
+        .l-main__right {
+            padding-top: 24px;
+            @include inc.mq(tab) {
+                padding-top: 188px;
+            }
+        }
+    }
 }
-
+#Reserve {
+    .l-main__left {
+        display: flex;
+    }
+    .l-main__right {
+        padding-top: 56px;
+        @include inc.mq(tab) {
+            padding-top: 188px;
+        }
+    }
+}
+#Access {
+    .-map {
+        padding-top: 56px;
+        @include inc.mq(tab) {
+            padding-top: 188px;
+        }
+    }
+}
 
 .separate {
     & + .separate {

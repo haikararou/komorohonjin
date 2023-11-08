@@ -6,24 +6,21 @@ p-news
 #News {
     .l-main {
         @include inc.sizing(padding-bottom, tab, 100px, spl, 28px);
-        .-indiv {
+        a.-indiv {
             display: none;
         }
         @include inc.mq(tab) {
-            .-indiv {
+            a.-indiv {
                 display: flex;
             }
         }
         & + .l-main.-newsList {
-            .-indiv {
+            a.-indiv {
                 display: flex;
             }
-            //margin-top: 28px;
             padding-top: 38px;
-            //border-top: 1px solid inc.$color-brd02;
             @include inc.mq(tab) {
                 margin: 0;
-                //padding-top: 72px;
                 @include inc.sizing(padding-bottom, wide, 72px, tab, 38px);
                 border-top: none;
             }
@@ -32,36 +29,51 @@ p-news
     .-indiv {
         display: flex;
         flex-direction:column;
-        .-fig {
-            order: 2;
-            padding-right: 40px;
-            background: url(../img/common/arw.svg) no-repeat 100% 50%;
-            background-size: 16px 12px;
+        .-aspect {
+            aspect-ratio: 5 / 4;
             @include inc.mq(tab) {
-                order: 1;
-                padding-right: 0;
+                aspect-ratio: unset;
             }
+        }
+        .-fig {
+            order: 1;
+            margin-top: 0;
+            position: absolute;
+            margin-left: -7.5vw;
+            @include inc.mq(tab) {
+                order: 4;
+                @include inc.sizing(margin-top, wide, 32px, tab, 24px);
+                position: static;
+                margin-left: 0;
+            }
+            //padding-right: 40px;
+            // background: url(../img/common/arw.svg) no-repeat 100% 50%;
+            // background-size: 16px 12px;
+            // @include inc.mq(tab) {
+            //     padding-right: 0;
+            // }
             @include inc.sizing(margin-bottom, wide, 32px, tab, 28px);
         }
         .-date {
-            order: 1;
+            order: 2;
             margin-bottom: 24px;
             @include inc.mq(tab) {
-                order: 2;
+                order: 1;
                 margin-bottom: 0;
             }
             line-height: 1;
             @include inc.sizingRem(font-size, wide, 15px, spl, 12px);
         }
         .-title {
+            //background: none;
             order: 3;
-            background: none;
             padding-right: 0;
             @include inc.mq(tab) {
+                order: 2;
                 margin-top: 6px;
-                background: url(../img/common/arw.svg) no-repeat 100% .5rem;
-                background-size: 18px 13px;
-                padding-right: 40px;
+                // background: url(../img/common/arw.svg) no-repeat 100% .5rem;
+                // background-size: 18px 13px;
+                // padding-right: 40px;
             }
             line-height: 1.6;
             @include inc.sizingRem(font-size, wide, 30px, spl, 20px);
@@ -70,10 +82,45 @@ p-news
             order: 4;
             margin-top: 2px;
             @include inc.mq(tab) {
+                order: 3;
                 margin-top: 4px;
             }
             line-height: 1.6;
             @include inc.sizingRem(font-size, wide, 16px, spl, 12px);
+        }
+    }
+    a.-indiv {
+        .-fig {
+            order: 2;
+            padding-right: 40px;
+            background: url(../img/common/arw.svg) no-repeat 100% 50%;
+            background-size: 16px 12px;
+            margin-top: 0;
+            @include inc.mq(tab) {
+                order: 1;
+                padding-right: 0;
+                background: none;
+                margin-top: 0;
+            }
+        }
+        .-date {
+            order: 1;
+            @include inc.mq(tab) {
+                order: 2;
+            }
+        }
+        .-title {
+            order: 3;
+            background: none;
+            @include inc.mq(tab) {
+                //margin-top: 6px;
+                background: url(../img/common/arw.svg) no-repeat 100% .5rem;
+                background-size: 18px 13px;
+                padding-right: 40px;
+            }
+        }
+        .-remarks {
+            order: 4;
         }
     }
     .newsList {
@@ -83,7 +130,7 @@ p-news
         @include inc.mq(tab) {
             gap: 100px 5%;
         }
-        .-indiv {
+        a.-indiv {
             width: 100%;
             margin-bottom: 38px;
             padding-bottom: 38px;

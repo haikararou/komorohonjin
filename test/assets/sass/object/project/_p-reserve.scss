@@ -1,0 +1,131 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+p-reserve
+-----------------------------------------------------*/
+#Reserve {
+    .-reserve {
+        .reserve-box {
+            border: 1px solid inc.$color-blk;
+            text-align: center;
+            h2 {
+                border-bottom: 1px solid inc.$color-blk;
+                line-height: 1;
+                @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+                padding: 20px;
+            }
+            h3 {
+                margin: 32px 0 30px;
+                @include inc.mq(tab) {
+                    margin: 32px 0 30px;
+                }
+                line-height: 1;
+                span {
+                    position: relative;
+                    color: inc.$color-org;
+                    display: block;
+                    width: 86%;
+                    margin: 0 auto;
+                    @include inc.sizingRem(font-size, wide, 20px, spl, 18px);
+                    &:before, &:after {
+                        content: "";
+                        display: block;
+                        width: 9px;
+                        height: 28px;
+                        background: url(../img/common/brackets_org.svg) no-repeat 50% 50%;
+                        background-size: contain;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translate(0%, -50%);
+                    }
+                    &:after {
+                        left: auto;
+                        right: 0;
+                        top: 50%;
+                        transform: translate(0%, -50%) rotate(180deg);
+                    }
+                }
+            }
+            h4 {
+                @include inc.sizingRem(font-size, wide, 24px, spl, 18px);
+                @include inc.sizing(margin-bottom, vr, 6px, spl, 2px);
+            }
+            h5 {
+                @include inc.sizingRem(font-size, wide, 16px, spl, 12px);
+            }
+        }
+        .-information {
+            margin: 30px 0;
+            background: inc.$color-wht;
+            border: 1px solid inc.$color-blk;
+            padding: 20px;
+        }
+        .lunch, .dinner, .party {
+            span {
+                position: relative;
+                margin-left: 56px;
+                @include inc.sizingRem(font-size, wide, 14px, spl, 12px);
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    left: -28px;
+                    top: 50%;
+                }
+            }
+        }
+        .lunch {
+            span {
+                &:before {
+                    background: url(../img/tiser/lunch.svg) no-repeat 50% 50%;
+                    background-size: contain;
+                }
+            }
+        }
+        .dinner {
+            span {
+                &:before {
+                    background: url(../img/tiser/dinner.svg) no-repeat 50% 50%;
+                    background-size: contain;
+                }
+            }
+        }
+        .party {
+            span {
+                &:before {
+                    background: url(../img/tiser/party.svg) no-repeat 50% 50%;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+    .-information {
+        .qr-img {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 20px;
+            img  {
+                width: auto;
+                height: 33px;
+            }
+        }
+        .card-img {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 14px;
+            img  {
+                width: auto;
+                height: 50px;
+                margin: 0 auto;
+            }
+            figcaption {
+                font-size: 10px;
+                text-align: center;
+                line-height: 1.4;
+            }
+        }
+    }
+}

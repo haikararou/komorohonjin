@@ -1,0 +1,373 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+p-reserve
+-----------------------------------------------------*/
+#Access {
+    .-map {
+        #google_map{
+            //margin: 0;
+            position: absolute!important;
+            top: 50px;
+            left: 50%;
+            margin-left: -50vw;
+            //height: 65vw;
+            @include inc.sizing(height, vr, 720px, spl, 400px);
+            width: 100vw;
+            //margin: 50px 0 50px -3.72vw;
+            @include inc.mq(vr) {
+                position: relative;
+                top: auto!important;
+                left: auto!important;
+                margin: 50px 0;
+                width: 100%;
+            }
+        }
+        .div2 {
+            position: relative;
+            @include inc.sizing(padding-top, vr, 820px, spl, 500px);
+        }
+        @include inc.mq(vr) {
+            display: grid;
+            // grid-template-columns: 23.08vw 58.97vw;
+            grid-template-rows: 882px 563px;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            width: 100%;
+            margin-bottom: 50px;
+            .div1 {
+                grid-area: 1 / 1 / 2 / 2;
+                display:flex;
+                justify-content:flex-end;
+                flex-flow: column;
+                padding-bottom: 70px;
+                .l-main__left---lead {
+                    padding-right: 10vw;
+                }
+            }
+            .div2 {
+                grid-area: 1 / 2 / 3 / 3;
+                width: 58.97vw;
+                padding: 0;
+            }
+            .div3 {
+                grid-area: 2 / 1 / 3 / 2;
+                display:flex;
+                justify-content:flex-end;
+                flex-flow: column;
+            }
+            #google_map{
+                height: 1445px;
+                width: 100%;
+                margin: 0 0 50px;
+            }
+        }
+        .map_add {
+            padding-right: 0;
+            @include inc.mq(tab) {
+                padding-right: 10vw;
+            }
+            //margin-top: 140px;
+            dl {
+                margin-bottom: 50px;
+                div {
+                    & + div {
+                        @include inc.sizing(margin-top, vr, 50px, spl, 32px);
+                    }
+                    dt {
+                        @include inc.sizingRem(font-size, wide, 24px, spl, 18px);
+                        @include inc.sizing(padding-left, vr, 32px, spl, 24px);
+                        position: relative;
+                        &:before {
+                            content: "";
+                            display: block;
+                            @include inc.sizing(width, vr, 19px, spl, 12px);
+                            @include inc.sizing(height, vr, 25px, spl, 16px);
+                            background: url(../img/tiser/pin02.svg) no-repeat 50% 50%;
+                            background-size: contain;
+                            position: absolute;
+                            left: 0;
+                            top: .4rem;
+                        }
+                        &.-first {
+                            &:before {
+                                background: url(../img/tiser/pin01.svg) no-repeat 50% 50%;
+                                background-size: contain;
+                            }
+                        }
+                    }
+                    dd {
+                        margin-top: 6px;
+                        @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+                        @include inc.sizing(padding-left, vr, 32px, spl, 24px);
+                    }
+                }
+            }
+            p {
+                @include inc.sizing(padding-left, vr, 32px, spl, 24px);
+                br {
+                    display: none;
+                    @include inc.mq(tab) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .l-main__left2 {
+        display: none!important;
+    }
+    .l-main__right2 {
+        border-top: 1px solid inc.$color-brd01;
+        width: 100%!important;
+        margin-top: 40px;
+        padding-top: 40px;
+        @include inc.mq(vr) {
+            border-top: none;
+            margin-top: 80px;
+            padding-top: 0;
+        }
+        dl {
+            dt {
+                width: 100%!important;
+                @include inc.mq(vr) {
+                    width: 28%!important;
+                }
+            }
+            dt + dd {
+                margin-top: 10px!important;
+                @include inc.mq(vr) {
+                    margin-top: 0!important;
+                }
+            }
+            div + div {
+                margin-top: 50px!important;
+                @include inc.mq(vr) {
+                    margin-top: 0!important;
+                }
+            }
+        }
+    }
+    @include inc.mq(vr) {
+        .l-main__left2 {
+            display: block!important;
+        }
+        .l-main__right2 {
+            margin-top: 0;
+            width: 58.97vw!important;
+        }
+    }
+
+
+    .-access {
+        .access-grid01 {
+            display: grid;
+            grid-template-columns: 48.5% 3% 48.5%;
+            grid-template-rows: 40px 120px 40px 120px 40px;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            div { width: 100%;}
+            .div1 { grid-area: 1 / 1 / 2 / 2; }
+            .div2 { grid-area: 1 / 2 / 2 / 3; }
+            .div3 { grid-area: 1 / 3 / 2 / 4; }
+            .div4 { grid-area: 2 / 1 / 3 / 2; }
+            .div5 { grid-area: 2 / 2 / 3 / 3; }
+            .div6 { grid-area: 2 / 3 / 3 / 4; }
+            .div7 { grid-area: 3 / 1 / 4 / 4; }
+            .div8 { grid-area: 4 / 1 / 5 / 4; }
+            .div9 { grid-area: 5 / 1 / 6 / 4; }
+            @include inc.mq(tab) {
+                display: grid;
+                grid-template-columns: 7% 50% 7% 29% 7%;
+                grid-template-rows: 140px 30px 140px;
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+                div { width: 100%;}
+                .div1 { grid-area: 1 / 1 / 2 / 2; }
+                .div2 { grid-area: 2 / 1 / 3 / 2; }
+                .div3 { grid-area: 3 / 1 / 4 / 2; }
+                .div4 { grid-area: 1 / 2 / 2 / 3; }
+                .div5 { grid-area: 2 / 2 / 3 / 3; }
+                .div6 { grid-area: 3 / 2 / 4 / 3; }
+                .div7 { grid-area: 1 / 3 / 4 / 4; }
+                .div8 { grid-area: 1 / 4 / 4 / 5; }
+                .div9 { grid-area: 1 / 5 / 4 / 6; }
+            }
+        }
+        .access-grid02 {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 40px 120px 40px 120px 40px;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            div { width: 100%;}
+            .div1 { grid-area: 1 / 1 / 2 / 2; }
+            .div2 { grid-area: 2 / 1 / 3 / 2; }
+            .div3 { grid-area: 3 / 1 / 4 / 2; }
+            .div4 { grid-area: 4 / 1 / 5 / 2; }
+            .div5 { grid-area: 5 / 1 / 6 / 2; }
+            @include inc.mq(tab) {
+                display: grid;
+                grid-template-columns: 7% 50% 7% 29% 7%;
+                grid-template-rows: 310px;
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+                div { width: 100%;}
+                .div1 { grid-area: 1 / 1 / 2 / 2; }
+                .div2 { grid-area: 1 / 2 / 2 / 3; }
+                .div3 { grid-area: 1 / 3 / 2 / 4; }
+                .div4 { grid-area: 1 / 4 / 2 / 5; }
+                .div5 { grid-area: 1 / 5 / 2 / 6; }
+            }
+        }
+        .access-grid03 {
+            display: grid;
+            grid-template-columns: 31% 3.5% 31% 3.5% 31%;
+            grid-template-rows: 40px 120px 90px 120px 40px;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            div { width: 100%;}
+            .div1 { grid-area: 1 / 1 / 2 / 2; }
+            .div2 { grid-area: 1 / 2 / 2 / 3; }
+            .div3 { grid-area: 1 / 3 / 2 / 4; }
+            .div4 { grid-area: 1 / 4 / 2 / 5; }
+            .div5 { grid-area: 1 / 5 / 2 / 6; }
+            .div6 { grid-area: 2 / 1 / 3 / 2; }
+            .div7 { grid-area: 2 / 2 / 3 / 3; }
+            .div8 { grid-area: 2 / 3 / 3 / 4; }
+            .div9 { grid-area: 2 / 4 / 3 / 5; }
+            .div10 { grid-area: 2 / 5 / 3 / 6; }
+            .div11 { grid-area: 3 / 1 / 4 / 6; }
+            .div12 { grid-area: 4 / 1 / 5 / 6; }
+            .div13 { grid-area: 5 / 1 / 6 / 6; }
+            @include inc.mq(tab) {
+                display: grid;
+                grid-template-columns: 7% 40% 17% 29% 7%;
+                grid-template-rows: 140px 30px 140px 30px 140px;
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+                div { width: 100%;}
+                .div1 { grid-area: 1 / 1 / 2 / 2; }
+                .div2 { grid-area: 2 / 1 / 3 / 2; }
+                .div3 { grid-area: 3 / 1 / 4 / 2; }
+                .div4 { grid-area: 4 / 1 / 5 / 2; }
+                .div5 { grid-area: 5 / 1 / 6 / 2; }
+                .div6 { grid-area: 1 / 2 / 2 / 3; }
+                .div7 { grid-area: 2 / 2 / 3 / 3; }
+                .div8 { grid-area: 3 / 2 / 4 / 3; }
+                .div9 { grid-area: 4 / 2 / 5 / 3; }
+                .div10 { grid-area: 5 / 2 / 6 / 3; }
+                .div11 { grid-area: 1 / 3 / 6 / 4; }
+                .div12 { grid-area: 1 / 4 / 6 / 5; }
+                .div13 { grid-area: 1 / 5 / 6 / 6; }
+            }
+        }
+        .underLine {
+            text-align: center;
+            display:flex; flex-direction:column; justify-content:center; align-items:center;
+            position: relative;
+            span {
+                padding: .6rem;
+                position: relative;
+                z-index: 2;
+                background: inc.$color-wht;
+                @include inc.mq(tab) {
+                    padding: 0 0 3.5rem;
+                    background: none;
+                }
+            }
+            &:after {
+                content: "";
+                display: block;
+                background: inc.$color-blk;
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                left: 50%;
+                top: 0;
+                @include inc.mq(tab) {
+                    width: 100%;
+                    height: 1px;
+                    left: 0;
+                    top: 50%;
+                }
+            }
+        }
+        .tate {
+            position: relative;
+            border: 1px solid inc.$color-blk;
+            margin-left: auto;
+            margin-right: auto;
+            display:flex; flex-direction:column; justify-content:center; align-items:center;
+            @include inc.mq(tab) {
+                writing-mode: vertical-rl;
+            }
+            div {
+                writing-mode: horizontal-tb;
+                width: 100%;
+                text-align: center;
+                font-size: 12px;
+                margin-top: 6px;
+                margin-left: -28px;
+                @include inc.mq(tab) {
+                    @include inc.sizingRem(font-size, wide, 14px, tab, 13px);
+                    width: auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin-top: 60px;
+                    @include inc.sizing(margin-left, vr, -10px, tab, -2px);
+                    a span {
+                        margin-left: 22px;
+                    }
+                    a span:before {
+                        width: 12px;
+                        height: 9px;
+                        left: -18px;
+                        margin-top: 1px;
+                    }
+                }
+            }
+        }
+        .title_train, .title_car {
+            position: relative;
+            padding: 0 0 0 48px;
+            em {
+                @include inc.sizingRem(font-size, wide, 24px, spl, 18px);
+                @include inc.mq(tab) {
+                    padding-right: 3rem;
+                }
+            }
+            //@include inc.sizing(margin-bottom, vr, 40px, spl, 20px);
+            margin-bottom: 2rem;
+            span {
+                display: block;
+                line-height: 2;
+                margin-top: 10px;
+                @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+                @include inc.mq(vr) {
+                    margin-top: 0;
+                    display: block;
+                    //padding-left: 3rem;
+                }
+            }
+            &:before {
+                content: "";
+                width: 36px;
+                height: 38px;
+                display: block;
+                background: url(../img/tiser/train.svg) no-repeat 50% 50%;
+                background-size: contain;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        .title_car {
+            &:before {
+                background: url(../img/tiser/car.svg) no-repeat 50% 50%;
+            }
+        }
+    }
+}
