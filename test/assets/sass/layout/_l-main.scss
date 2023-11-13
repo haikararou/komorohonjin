@@ -401,7 +401,9 @@ main {
     }
 }
 #Party,
-#Beverage {
+#Beverage,
+#Party,
+#Dinner {
     .l-main__left {
         order: 2;
         display: flex;

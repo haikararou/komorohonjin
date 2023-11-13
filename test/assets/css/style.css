@@ -556,7 +556,9 @@ main {
 }
 
 #Party .l-main__left,
-#Beverage .l-main__left {
+#Beverage .l-main__left,
+#Party .l-main__left,
+#Dinner .l-main__left {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -566,21 +568,27 @@ main {
 }
 @media screen and (min-width: 768px) {
   #Party .l-main__left,
-  #Beverage .l-main__left {
+  #Beverage .l-main__left,
+  #Party .l-main__left,
+  #Dinner .l-main__left {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
 }
 #Party .l-main__right,
-#Beverage .l-main__right {
+#Beverage .l-main__right,
+#Party .l-main__right,
+#Dinner .l-main__right {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
 }
 @media screen and (min-width: 768px) {
   #Party .l-main__right,
-  #Beverage .l-main__right {
+  #Beverage .l-main__right,
+  #Party .l-main__right,
+  #Dinner .l-main__right {
     padding-top: 188px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -3147,7 +3155,6 @@ p-lunch
 
 @media screen and (min-width: 768px) {
   .-positionEnd {
-    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3158,7 +3165,6 @@ p-lunch
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
-    padding-bottom: 3rem;
   }
 }
 
@@ -3246,52 +3252,469 @@ p-lunch
 .-timeschedule {
   background: #EFE9DE;
 }
-.-timeschedule h2 {
-  font-size: clamp(0.75rem, 0.38vw + 0.625rem, 1rem);
-  margin-bottom: clamp(30px, 0.39vw + 27px, 32px);
+.-timeschedule .-layout {
+  width: 100%;
 }
-.-timeschedule dl div {
+@media screen and (min-width: 768px) {
+  .-timeschedule .-layout {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: ;
+    grid-template-columns: repeat(28.2vw, 1fr);
+    -ms-grid-rows: 1fr 0px 1fr 0px 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .-timeschedule .-layout > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .-timeschedule .-layout > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .-timeschedule .-layout > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .-timeschedule .-layout > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 7;
+  }
+  .-timeschedule .-layout > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 9;
+  }
+  .-timeschedule .-layout > *:nth-child(6) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 11;
+  }
+  .-timeschedule .-layout > *:nth-child(7) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 13;
+  }
+  .-timeschedule .-layout > *:nth-child(8) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 15;
+  }
+  .-timeschedule .-layout > *:nth-child(9) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 17;
+  }
+  .-timeschedule .-layout > *:nth-child(10) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 19;
+  }
+  .-timeschedule .-layout > *:nth-child(11) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 21;
+  }
+  .-timeschedule .-layout > *:nth-child(12) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 23;
+  }
+  .-timeschedule .-layout > *:nth-child(13) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 25;
+  }
+  .-timeschedule .-layout > *:nth-child(14) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 27;
+  }
+  .-timeschedule .-layout > *:nth-child(15) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 29;
+  }
+  .-timeschedule .-layout > *:nth-child(16) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 31;
+  }
+  .-timeschedule .-layout > *:nth-child(17) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 33;
+  }
+  .-timeschedule .-layout > *:nth-child(18) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 35;
+  }
+  .-timeschedule .-layout > *:nth-child(19) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 37;
+  }
+  .-timeschedule .-layout > *:nth-child(20) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 39;
+  }
+  .-timeschedule .-layout > *:nth-child(21) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 41;
+  }
+  .-timeschedule .-layout > *:nth-child(22) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 43;
+  }
+  .-timeschedule .-layout > *:nth-child(23) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 45;
+  }
+  .-timeschedule .-layout > *:nth-child(24) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 47;
+  }
+  .-timeschedule .-layout > *:nth-child(25) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 49;
+  }
+  .-timeschedule .-layout > *:nth-child(26) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 51;
+  }
+  .-timeschedule .-layout > *:nth-child(27) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 53;
+  }
+  .-timeschedule .-layout > *:nth-child(28) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 55;
+  }
+  .-timeschedule .-layout > *:nth-child(29) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .-timeschedule .-layout > *:nth-child(30) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .-timeschedule .-layout > *:nth-child(31) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
+  .-timeschedule .-layout > *:nth-child(32) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 7;
+  }
+  .-timeschedule .-layout > *:nth-child(33) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 9;
+  }
+  .-timeschedule .-layout > *:nth-child(34) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 11;
+  }
+  .-timeschedule .-layout > *:nth-child(35) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 13;
+  }
+  .-timeschedule .-layout > *:nth-child(36) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 15;
+  }
+  .-timeschedule .-layout > *:nth-child(37) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 17;
+  }
+  .-timeschedule .-layout > *:nth-child(38) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 19;
+  }
+  .-timeschedule .-layout > *:nth-child(39) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 21;
+  }
+  .-timeschedule .-layout > *:nth-child(40) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 23;
+  }
+  .-timeschedule .-layout > *:nth-child(41) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 25;
+  }
+  .-timeschedule .-layout > *:nth-child(42) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 27;
+  }
+  .-timeschedule .-layout > *:nth-child(43) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 29;
+  }
+  .-timeschedule .-layout > *:nth-child(44) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 31;
+  }
+  .-timeschedule .-layout > *:nth-child(45) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 33;
+  }
+  .-timeschedule .-layout > *:nth-child(46) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 35;
+  }
+  .-timeschedule .-layout > *:nth-child(47) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 37;
+  }
+  .-timeschedule .-layout > *:nth-child(48) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 39;
+  }
+  .-timeschedule .-layout > *:nth-child(49) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 41;
+  }
+  .-timeschedule .-layout > *:nth-child(50) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 43;
+  }
+  .-timeschedule .-layout > *:nth-child(51) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 45;
+  }
+  .-timeschedule .-layout > *:nth-child(52) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 47;
+  }
+  .-timeschedule .-layout > *:nth-child(53) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 49;
+  }
+  .-timeschedule .-layout > *:nth-child(54) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 51;
+  }
+  .-timeschedule .-layout > *:nth-child(55) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 53;
+  }
+  .-timeschedule .-layout > *:nth-child(56) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 55;
+  }
+  .-timeschedule .-layout > *:nth-child(57) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .-timeschedule .-layout > *:nth-child(58) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .-timeschedule .-layout > *:nth-child(59) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
+  }
+  .-timeschedule .-layout > *:nth-child(60) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 7;
+  }
+  .-timeschedule .-layout > *:nth-child(61) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 9;
+  }
+  .-timeschedule .-layout > *:nth-child(62) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 11;
+  }
+  .-timeschedule .-layout > *:nth-child(63) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 13;
+  }
+  .-timeschedule .-layout > *:nth-child(64) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 15;
+  }
+  .-timeschedule .-layout > *:nth-child(65) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 17;
+  }
+  .-timeschedule .-layout > *:nth-child(66) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 19;
+  }
+  .-timeschedule .-layout > *:nth-child(67) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 21;
+  }
+  .-timeschedule .-layout > *:nth-child(68) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 23;
+  }
+  .-timeschedule .-layout > *:nth-child(69) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 25;
+  }
+  .-timeschedule .-layout > *:nth-child(70) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 27;
+  }
+  .-timeschedule .-layout > *:nth-child(71) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 29;
+  }
+  .-timeschedule .-layout > *:nth-child(72) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 31;
+  }
+  .-timeschedule .-layout > *:nth-child(73) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 33;
+  }
+  .-timeschedule .-layout > *:nth-child(74) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 35;
+  }
+  .-timeschedule .-layout > *:nth-child(75) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 37;
+  }
+  .-timeschedule .-layout > *:nth-child(76) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 39;
+  }
+  .-timeschedule .-layout > *:nth-child(77) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 41;
+  }
+  .-timeschedule .-layout > *:nth-child(78) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 43;
+  }
+  .-timeschedule .-layout > *:nth-child(79) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 45;
+  }
+  .-timeschedule .-layout > *:nth-child(80) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 47;
+  }
+  .-timeschedule .-layout > *:nth-child(81) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 49;
+  }
+  .-timeschedule .-layout > *:nth-child(82) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 51;
+  }
+  .-timeschedule .-layout > *:nth-child(83) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 53;
+  }
+  .-timeschedule .-layout > *:nth-child(84) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 55;
+  }
+}
+.-timeschedule .-schedule {
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .-timeschedule .-schedule {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1/1/2/2;
+    margin-bottom: 80px;
+  }
+}
+.-timeschedule .-calendar {
+  background: #fff;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .-timeschedule .-calendar {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1/2/4/3;
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+.-timeschedule .-calendar .-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
-.-timeschedule dl div:before {
+@media screen and (min-width: 768px) {
+  .-timeschedule .-calendar .-inner {
+    width: 53.85vw;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .-timeschedule .-calendar .-inner {
+    width: 58.97vw;
+  }
+}
+.-timeschedule .-reserve {
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .-timeschedule .-reserve {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2/1/3/2;
+    margin-bottom: 80px;
+  }
+}
+.-timeschedule .-reserve p.-dot {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.-timeschedule .-reserve p.-dot:before {
   content: "";
   display: block;
-  height: 2px;
-  background: linear-gradient(to right, #000, #000 2px, transparent 1px, transparent 1px) repeat-x left bottom/6px 2px;
-  width: 100%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #7E7257;
   position: absolute;
-  top: 1.15rem;
-  z-index: -1;
+  left: 0.2em;
+  top: 0.55rem;
 }
-.-timeschedule dl div.no_dot:before {
-  display: none;
+@media screen and (min-width: 768px) {
+  .-timeschedule .-comment {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 3/1/4/2;
+  }
 }
-.-timeschedule dl div dt {
-  padding-right: 1rem;
-  padding-left: clamp(24px, 1.45vw + 16.4px, 35px);
-  background: url(../img/common/arw_bwn.svg) no-repeat 0 0.8rem #fff;
-  background-size: clamp(10px, 0.79vw + 5.9px, 16px);
-  font-size: clamp(1.125rem, 0.57vw + 0.94375rem, 1.5rem);
-}
-.-timeschedule dl div dt span {
-  display: block;
-  font-size: clamp(0.875rem, 0.19vw + 0.8125rem, 1rem);
-}
-.-timeschedule dl div dd {
-  padding: 0.5rem 0 0 1rem;
+.-timeschedule h2 {
   font-size: clamp(0.75rem, 0.38vw + 0.625rem, 1rem);
-  background: #fff;
+  margin-bottom: clamp(16px, 1.56vw + 4px, 24px);
 }
-.-timeschedule dl div + div {
-  margin-top: clamp(28px, 0.26vw + 26.7px, 30px);
+.-timeschedule h3 {
+  font-size: clamp(1.5rem, 1.53vw + 1rem, 2.5rem);
+  margin-bottom: clamp(4px, 0.78vw - 2px, 8px);
+}
+.-timeschedule h4 {
+  font-size: clamp(0.875rem, 0.95vw + 0.56875rem, 1.5rem);
+}
+.-timeschedule h4 span {
+  font-size: clamp(0.6875rem, 0.67vw + 0.46875rem, 1.125rem);
+}
+.-timeschedule.-dinner {
+  background: #D8DDE6;
 }
 
 .-menu dl .-flx + .-flx {
@@ -3453,6 +3876,15 @@ p-lunch
 }
 #Party .tabPeriod li.active a {
   background: #aaaaaa;
+  color: #fff;
+}
+
+#Dinner .tabPeriod li a {
+  background: #B7BFCC;
+  color: #707494;
+}
+#Dinner .tabPeriod li.active a {
+  background: #2B2B5D;
   color: #fff;
 }
 
@@ -3632,6 +4064,65 @@ p-lunch
     grid-area: 1/2/2/3;
     padding: 0;
   }
+}
+
+.-float {
+  position: fixed;
+  top: 50vh;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  right: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  font-size: 14px;
+  background: url(../img/common/arw_wht.svg) no-repeat 50% 80% #2B2B5D;
+  background-size: 10px 8px;
+  border-radius: 50%;
+}
+.-float div {
+  font-family: p22-mackinac-pro, serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: -0.5rem;
+}
+.-float div span {
+  display: block;
+  font-size: 10px;
+  font-family: dnp-shuei-gothic-gin-std, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+@media screen and (min-width: 768px) {
+  .-float {
+    width: 150px;
+    height: 150px;
+    background-size: 16px 12px;
+  }
+  .-float div {
+    font-size: 24px;
+  }
+  .-float div span {
+    font-size: 14px;
+  }
+}
+.-float.-dinner {
+  background-color: #463A1E;
 }
 
 /*
