@@ -69,6 +69,11 @@ p + figure {
     margin-top: 3rem;
   }
 }
+.p-conts.-mini {
+  & + .p-conts.-mini {
+    margin-top: 1rem!important;
+  }
+}
 
 .p-column-box {
   + .p-column-box {

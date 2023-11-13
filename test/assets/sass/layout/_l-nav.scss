@@ -14,7 +14,8 @@ l-nav
     height: 100vh;
     top: 0;
     bottom: 0;
-    right: calc( -61.54vw - 2.564vw - 80vw);
+    //right: calc( -61.54vw - 2.564vw - 80vw);
+    right: -300vw;
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
     a {

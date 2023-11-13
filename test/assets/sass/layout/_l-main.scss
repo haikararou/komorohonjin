@@ -7,8 +7,21 @@ main {
     overflow: hidden;
 }
 
-.sub .l-main {
+.sub #main {
     padding-top: 20vw;
+    @include inc.mq(tab) {
+        padding-top: 0;
+    }
+}
+#Reserve.sub #main {
+    padding-top: 11vw;
+    @include inc.mq(tab) {
+        padding-top: 0;
+    }
+}
+#Party.sub #main,
+#Beverage.sub #main {
+    padding-top: 11vw;
     @include inc.mq(tab) {
         padding-top: 0;
     }
@@ -233,6 +246,19 @@ main {
         @include inc.mq(desk) {
             padding: 80px 100px;
         }
+        &.-mini {
+            padding: 2vw;
+            color: inc.$color-blk2!important;
+            .c-title.-M + * {
+                margin-top: 1rem!important;
+            }
+            @include inc.mq(tab) {
+                padding: 16px 24px;
+            }
+            @include inc.mq(desk) {
+                padding: 24px 32px;
+            }
+        }
     }
     &.pickup-border {
         border: 1px solid inc.$color-brd01;
@@ -350,12 +376,19 @@ main {
 }
 #Reserve {
     .l-main__left {
+        order: 2;
         display: flex;
+        @include inc.mq(tab) {
+            order: 1;
+            padding-top: 188px;
+        }
     }
     .l-main__right {
-        padding-top: 56px;
+        //padding-top: 56px;
+        order: 1;
         @include inc.mq(tab) {
             padding-top: 188px;
+            order: 2;
         }
     }
 }
@@ -364,6 +397,24 @@ main {
         padding-top: 56px;
         @include inc.mq(tab) {
             padding-top: 188px;
+        }
+    }
+}
+#Party,
+#Beverage {
+    .l-main__left {
+        order: 2;
+        display: flex;
+        @include inc.mq(tab) {
+            order: 1;
+        }
+    }
+    .l-main__right {
+        order: 1;
+        //padding-top: 56px;
+        @include inc.mq(tab) {
+            padding-top: 188px;
+            order: 2;
         }
     }
 }

@@ -23,6 +23,12 @@ p-lunch
         justify-content: end;
     }
 }
+.-main-bottom {
+    padding-bottom: 0;
+    @include inc.mq(tab) {
+        padding-bottom: 15vw;
+    }
+}
 
 .-smallMenu {
     margin: 48px 0;
@@ -50,6 +56,11 @@ p-lunch
                 top: 1.15rem;
                 z-index: -1;
             }
+            &.no_dot {
+                &:before {
+                    display: none;
+                }
+            }
             dt {
                 padding-right: 1rem;
                 @include inc.sizing(padding-left, vr, 35px, spl, 24px);
@@ -73,6 +84,64 @@ p-lunch
     }
 }
 
+.-timeschedule {
+    background: inc.$color-beg;
+    h2 {
+        @include inc.sizingRem(font-size, wide, 16px, spl, 12px);
+        @include inc.sizing(margin-bottom, vr, 32px, tab, 30px);
+    }
+    dl {
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+            &:before {
+                content: "";
+                display: block;
+                height: 2px;
+                background: linear-gradient(to right, #000, #000 2px, transparent 1px, transparent 1px) repeat-x left bottom / 6px 2px;
+                width: 100%;
+                position: absolute;
+                top: 1.15rem;
+                z-index: -1;
+            }
+            &.no_dot {
+                &:before {
+                    display: none;
+                }
+            }
+            dt {
+                padding-right: 1rem;
+                @include inc.sizing(padding-left, vr, 35px, spl, 24px);
+                background: url(../img/common/arw_bwn.svg) no-repeat 0 .8rem inc.$color-wht;
+                @include inc.sizing(background-size, vr, 16px, spl, 10px);
+                @include inc.sizingRem(font-size, wide, 24px, spl, 18px);
+                span {
+                    display: block;
+                    @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+                }
+            }
+            dd {
+                padding: .5rem 0 0 1rem;
+                @include inc.sizingRem(font-size, wide, 16px, spl, 12px);
+                background: inc.$color-wht;
+            }
+            & + div {
+                @include inc.sizing(margin-top, vr, 30px, spl, 28px);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
 .-menu {
     dl {
         .-flx + .-flx {
@@ -88,6 +157,11 @@ p-lunch
             font-weight: 700;
             font-style: normal;
             width: 100%!important;
+            &.-jpn {
+                font-family: dnp-shuei-gothic-gin-std, sans-serif;
+                font-weight: 500;
+                font-style: normal;
+            }
             @include inc.mq(vr) {
                 width: 28%!important;
             }
@@ -149,12 +223,16 @@ p-lunch
         }
     }
     .menu-info {
-        border: 1px solid inc.$color-brd02;
         margin-top: 20px;
-        padding: 15px;
         @include inc.mq(tab) {
             margin-top: 80px;
-            padding: 30px;
+        }
+        & .menu-memo {
+            border: 1px solid inc.$color-brd02;
+            padding: 15px;
+            @include inc.mq(tab) {
+                padding: 30px;
+            }
         }
     }
     &.-dinner {
@@ -173,6 +251,18 @@ p-lunch
     }
 }
 
+#Party .-menu {
+    dl {
+        dt {
+            color: inc.$color-gry;
+        }
+        dd {
+            li:before {
+                background: inc.$color-gry;
+            }
+        }
+    }
+}
 // .p-header {
 //     background: inc.$color-bg01;
 //     width: auto;
@@ -213,12 +303,18 @@ p-lunch
 .tabPeriod {
     display: flex;
     flex-wrap: wrap;
+    gap: 0 6px;
     li {
+        width: calc((100% - 6px) / 2);
+        @include inc.mq(tab) {
+            width: auto;
+        }
         list-style: none;
         margin: 0;
         padding: 0;
         cursor: pointer;
         a {
+            text-align: center;
             display: block;
             background: inc.$color-beg;
             color: inc.$color-bwn2;
@@ -231,8 +327,21 @@ p-lunch
             background: inc.$color-bwn;
             color: inc.$color-wht;
         }
-        & + li {
-            margin-left: 6px;
+        // & + li {
+        //     margin-left: 6px;
+        // }
+    }
+}
+
+#Party .tabPeriod {
+    li {
+        a {
+            background: inc.$color-gry2;
+            color: inc.$color-gry;
+        }
+        &.active a {
+            background: inc.$color-gry;
+            color: inc.$color-wht;
         }
     }
 }
@@ -261,5 +370,80 @@ p-lunch
     }
     to {
         opacity: 1;
+    }
+}
+
+.beverage-list {
+    font-family: p22-mackinac-pro, serif;
+    font-weight: 700;
+    font-style: normal;
+    border-top: 1px solid inc.$color-brd03;
+    .-item {
+        border-bottom: 1px solid inc.$color-brd03;
+        padding: 1rem 0;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, auto);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        @include inc.mq(tab) {
+            grid-template-columns: 1fr 80px 120px;
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+    }
+    .-title {
+        padding-left: 2em;
+        line-height: 2;
+        position: relative;
+        grid-area: 1 / 1 / 2 / 3;
+        @include inc.mq(tab) {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: inc.$color-gry;
+            position: absolute;
+            left: 0;
+            top: .55rem;
+            @include inc.mq(vr) {
+                width: 20px;
+                height: 20px;
+                left: 0;
+                top: .4rem;
+            }
+        }
+        span {
+            font-family: dnp-shuei-gothic-gin-std, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            display: block;
+        }
+    }
+    .-price {
+        grid-area: 2 / 1 / 3 / 2;
+        padding: .6rem 0 0 2rem;
+        @include inc.mq(tab) {
+            grid-area: 1 / 3 / 2 / 4;
+            text-align: right;
+            padding: 0;
+        }
+        @include inc.sizingRem(font-size, wide, 16px, spl, 14px);
+    }
+    .-era {
+        grid-area: 2 / 2 / 3 / 3;
+        padding: .6rem 0 0 0;
+        @include inc.mq(tab) {
+            grid-area: 1 / 2 / 2 / 3;
+            padding: 0;
+        }
+        color: inc.$color-gry;
+        @include inc.sizingRem(font-size, wide, 14px, spl, 12px);
+        text-align: right;
     }
 }
