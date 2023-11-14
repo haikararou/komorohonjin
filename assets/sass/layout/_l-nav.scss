@@ -14,7 +14,8 @@ l-nav
     height: 100vh;
     top: 0;
     bottom: 0;
-    right: calc( -61.54vw - 2.564vw - 80vw);
+    //right: calc( -61.54vw - 2.564vw - 80vw);
+    right: -300vw;
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
     a {
@@ -25,11 +26,14 @@ l-nav
         margin: 0;
         padding: 0;
         @include inc.sizing(width, wide, 180px, lap, 140px);
-        //width: 9.5vw;
         text-align: right;
         position: absolute;
         right: 50px;
-        top: 210px;
+        //top: 120px;
+        @include inc.sizing(top, tabl, 210px, spl, 120px);
+        @include inc.mq(tabl) {
+            top: 210px;
+        }
         li {
             margin: 0;
             padding: 0;
@@ -66,16 +70,35 @@ l-nav
 
 
 .l-nav {
+    overflow: scroll;
+    padding-bottom: 60px;
+    @include inc.mq(tabl) {
+        padding-bottom: 0;
+    }
     .p-header {
         left: 50px;
         right: auto;
-        width: 52px;
-        @include inc.sizing(width, tab, 80px, spl, 52px);
+        //width: 52px;
+        //@include inc.sizing(width, tab, 80px, spl, 52px);
         @include inc.mq(tabl) {
             left: auto;
             right: clamp(90px, 23.53vw - 151.2px, 150px);
             width: 525px;
             @include inc.sizing(width, vr, 575px, lap, 525px);
+        }
+        .-brackets-list {
+            display: none;
+            @include inc.mq(tabl) {
+                display: flex;
+            }
+        }
+        .-language-list {
+            //width: 80px;
+            width: 90px;
+            //@include inc.sizing(width, tab, 80px, spl, 52px);
+            @include inc.mq(tabl) {
+                width: 100px;
+            }
         }
         &__list {
             &.-list01 {
@@ -100,9 +123,9 @@ l-nav
                 }
                 li {
                     a {
-                      @include inc.sizingRem(font-size, tab, 18px, spl, 14px);
+                        @include inc.sizingRem(font-size, tab, 18px, spl, 14px);
                     }
-                  }
+                }
                 li + li {
                     &:before {
                         left: -2.3vw;
@@ -118,10 +141,15 @@ l-nav
     .p-nav {
         &__inner {
             &---logo {
-                position: absolute;
-                top: 210px;
-                left: 50px;
+                // position: absolute;
+                // top: 210px;
+                // left: 50px;
+                margin-left: 50px;
+                //margin-top: 50px;
+                @include inc.sizing(margin-top, tabl, 230px, spl, 50px);
                 @include inc.mq(tabl) {
+                    margin: 0;
+                    position: absolute;
                     top: auto;
                     left: auto;
                     right: 50px;
@@ -130,18 +158,16 @@ l-nav
                 @include inc.sizing(width, wide, 280px, lap, 180px);
             }
             &---navi {
+                margin-left: 50px;
+                margin-top: 100px;
                 @include inc.sizing(width, vr, 650px, lap, 500px);
                 @include inc.sizing(width, wide, 650px, vr, 650px);
-                position: absolute;
-                left: 50px;
-                bottom: 50px;
+                @include inc.mq(tabl) {
+                    position: absolute;
+                    left: 50px;
+                    bottom: 50px;
+                }
             }
-            // &---grid {
-            //     .grid1 { @include inc.sizing(width, tabl, 300px, min, 300px);}
-            //     .grid2 { @include inc.sizing(width, tabl, 300px, min, 300px); margin-top: 40px;}
-            //     .grid3 { width: 250px;}
-            //     .grid4 { width: 250px; margin-top: 40px;}
-            // }
             &---grid {
                 .grid1 {}
                 .grid2 { margin-top: 30px;}

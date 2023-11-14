@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Input your ID and Password."
-AuthUserFile /var/www/vhosts/komorohonjin.com/httpdocs/test/.htpasswd
-require valid-user

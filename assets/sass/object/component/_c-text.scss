@@ -15,7 +15,8 @@ c-text
     @include inc.sizingRem(font-size, wide, 30px, spl, 20px);
     //margin: 0 0 2rem;
     & + * {
-      margin-top: 2rem;
+      //margin-top: 2rem;
+      margin-top: 1.7vw;
     }
   }
   &.-M {
@@ -91,8 +92,8 @@ c-text
     }
   }
 }
-
-
+.c-text {
+}
 
 .-eng {
   font-family: p22-mackinac-pro, serif;
@@ -116,10 +117,12 @@ c-text
   }
 }
 
+.-red {
+  color: inc.$color-red;
+}
 .-colorBwn {
   color: inc.$color-bwn;
 }
-
 
 .p-title-L {
     //margin: 0 0 80px;
@@ -173,7 +176,3 @@ c-text
     }
   }
 }
-
-
-
-

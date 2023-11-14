@@ -16,25 +16,14 @@ p {
       @include inc.sizingRem(font-size, wide, 16px, tabl, 15px);
   }
 }
-
-// ul.list--dot {
-//   margin: 0;
-//   padding: 1rem 0 1rem 1.5rem;
-//   li {
-//     margin: 0;
-//     padding: 0;
-//     & + li {
-//       margin-top: .5rem
-//     }
-//   }
-// }
-
 p + p {
   @include inc.sizing(margin-top, wide, 32px, spl, 16px);
 }
+p + figure {
+  @include inc.sizing(margin-top, wide, 24px, spl, 12px);
+}
 
 * + .-near {
-  //@include inc.sizing(margin-top, wide, 12px, spl, 8px);
   margin-top: clamp(8px, 0.38vw + 6px, 12px)!important;
   margin-bottom: clamp(8px, 0.38vw + 6px, 12px)!important;
   display: flex;
@@ -71,18 +60,18 @@ p + p {
     }
   }
   & + .p-text-box {
-    //@include inc.sizing(margin-top, wide, 80px, spl, 30px);
-    margin-top: 3vw;
-    @include inc.mq(tab) {
-      margin-top: 1vw;
-    }
+    margin-top: 5vw;
   }
 }
 
 .p-conts {
   & + .p-conts {
-    //@include inc.sizing(margin-top, wide, 40px, spl, 24px);
     margin-top: 3rem;
+  }
+}
+.p-conts.-mini {
+  & + .p-conts.-mini {
+    margin-top: 1rem!important;
   }
 }
 

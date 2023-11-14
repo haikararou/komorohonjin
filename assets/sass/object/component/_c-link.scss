@@ -16,6 +16,7 @@ c-link
             position: relative;
             margin-left: 28px;
             white-space: nowrap;
+            display: inline-block;
         }
         span:before {
             content: "";
@@ -26,7 +27,7 @@ c-link
             background-size: contain;
             position: absolute;
             left: -28px;
-            top: 50%;
+            top: 1.05rem;
             transform: translate(0%, -50%);
         }
     }
@@ -46,6 +47,26 @@ c-link
             right: -28px;
             top: 50%;
             transform: translate(0%, -50%);
+        }
+    }
+    &.-arwC {
+        span {
+            position: relative;
+            white-space: nowrap;
+        }
+        span:before {
+            content: "";
+            display: block;
+            width: 44px;
+            height: 30px;
+            background: url(../img/common/arw.svg) no-repeat 50% 50%;
+            background-size: 16px;
+            position: absolute;
+            right: -58px;
+            top: 50%;
+            transform: translate(0%, -50%);
+            border: 1px solid inc.$color-blk;
+            border-radius: 15px;
         }
     }
     &.-blankA {
