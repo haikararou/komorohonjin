@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ja" prefix="og: https://ogp.me/ns#"  class="no-js">
 <head>
-<!-- ?php include($_SERVER['DOCUMENT_ROOT'] . /test/a/daimatsu/assets/inc/meta.php"); ?-->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <title>小諸本陣主屋 | 藤屋 | THE FUJIYA GOHONJIN</title>
@@ -17,6 +16,7 @@
 <meta name="twitter:title" content="小諸本陣主屋 | 藤屋 | THE FUJIYA GOHONJIN" />
 <meta name="twitter:image" content="ogp.png" />
 <link rel='stylesheet' href='./assets/css/reset.css?ver=6.1.1' type='text/css' media='all' />
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 <link rel='stylesheet' href='./assets/css/style.css?ver=6.1.1' type='text/css' media='all' />
 <link rel="icon" href="./assets/img/favicon.ico" type="image/png"/>
 <!-- adobe fonts -->
@@ -33,7 +33,7 @@
 <!-- adobe fonts end -->
 </head>
 
-<body class="l-body" id="home">
+<body class="l-body" id="Home">
 <!-- ?php include($_SERVER['DOCUMENT_ROOT'] . /test/a/daimatsu/assets/inc/header.php"); ?-->
 
 <div class="l-burger">
@@ -41,14 +41,10 @@
 </div>
 
 <header class="l-header">
-  <figure class="l-logo">
-    <a href="./"><img src="./assets/img/common/logo.svg" alt="小諸本陣主屋 | 藤屋 | THE FUJIYA GOHONJIN"></a>
-  </figure>
   <nav class="p-header">
-    <!--   -->
-    <ul class="p-header__list -list02">
-      <li><a href="./contact"><span>JP</span></a></li>
-      <li><a href="./contact"><span>EN</span></a></li>
+    <ul class="-language-list">
+      <li><a href="<?php echo $path; ?>"><span class="active">JP</span></a></li>
+      <li><a href="<?php echo $path; ?>en"><span>EN</span></a></li>
     </ul>
   </nav>
 </header>
@@ -56,136 +52,199 @@
 <section class="l-nav">
   <div class="l-header">
     <nav class="p-header">
-      <!-- <ul class="p-header__list -list01">
-        <li class="-item01"><a href="./">ご予約・営業案内</a></li>
-        <li class="-item02"><a href="./product">アクセス・駐車場</a></li>
-      </ul> -->
       <ul class="p-header__list -list02">
-        <li><a href="./contact"><span>JP</span></a></li>
-        <li><a href="./contact"><span>EN</span></a></li>
+        <li><a href="<?php echo $path; ?>"><span>JP</span></a></li>
+        <li><a href="<?php echo $path; ?>en"><span>EN</span></a></li>
       </ul>
     </nav>
   </div>
   <ul class="l-nav--list">
-    <li><a href="">Story</a></li>
-    <li><a href="">Lunch</a></li>
-    <li><a href="">Dinner</a></li>
-    <li><a href="">Beverage</a></li>
-    <li><a href="">Party</a></li>
+    <li><a href="<?php echo $path; ?>story">Story</a></li>
+    <li><a href="<?php echo $path; ?>lunch">Lunch</a></li>
+    <li><a href="<?php echo $path; ?>dinner">Dinner</a></li>
+    <li><a href="<?php echo $path; ?>beverage">Beverage</a></li>
+    <li><a href="<?php echo $path; ?>party">Party</a></li>
   </ul>
   <div class="p-nav__inner---logo">
     <figure>
-      <img src="./assets/img/common/logo_wht.svg" alt="小諸本陣主屋 | 藤屋 | THE FUJIYA GOHONJIN">
+      <img src="<?php echo $path; ?>assets/img/common/logo_wht.svg" alt="小諸本陣主屋 | 藤屋 | THE FUJIYA GOHONJIN">
     </figure>
   </div>
 </section>
 
+<section class="l-main -flx home_lead -reserve">
+  <section class="l-main__right">
+    <div class="swiperCont -slider">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="<?php echo $path; ?>assets/img/top/ph001.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo $path; ?>assets/img/top/ph001-2.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo $path; ?>assets/img/top/ph001-3.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
+    </div>
 
-
-  <section class="l-main">
-    <ul class="l-nav--list">
-      <li><a href="">Story</a></li>
-      <li><a href="">Lunch</a></li>
-      <li><a href="">Dinner</a></li>
-      <li><a href="">Beverage</a></li>
-      <li><a href="">Party</a></li>
-    </ul>
-
-    <figure>
-      <img src="./assets/img/common/logo.svg" alt="小諸本陣主屋 | 藤屋 | THE FUJIYA GOHONJIN">
-    </figure>
-
-    <slider>
+    <!-- <div class="-slider">
       <figure>
-        <img src="./assets/img/top/ph001.jpg" alt="">
+        <img src="<?php echo $path; ?>assets/img/top/ph001.jpg" alt="">
       </figure>
-    </slider>
-
-    <ul class="p-header__list -list01">
-      <li class="-item01"><a href="./">ご予約・営業案内</a></li>
-      <li class="-item02"><a href="./product">アクセス・駐車場</a></li>
+    </div> -->
+    <div class="-wrapper">
+      <div class="-logo -flx">
+        <figure>
+          <img src="<?php echo $path; ?>assets/img/common/logo.svg" alt="小諸本陣主屋 | 藤屋 | THE FUJIYA GOHONJIN">
+        </figure>
+        <ul class="l-nav--list">
+          <li><a href="<?php echo $path; ?>lunch">Lunch</a></li>
+          <li><a href="<?php echo $path; ?>dinner">Dinner</a></li>
+          <li><a href="<?php echo $path; ?>beverage">Beverage</a></li>
+          <li><a href="<?php echo $path; ?>party">Party</a></li>
+        </ul>
+      </div>
+      <ul class="-brackets-list">
+        <li class="-org"><a href="<?php echo $path; ?>reserve/">ご予約・営業案内</a></li>
+        <li class="-blk"><a href="<?php echo $path; ?>access/">アクセス・駐車場</a></li>
+      </ul>
+      <div class="-story -eng">
+        Hokkokukaidou Komorojyuku<br>Italian Restaurant KOMORO HONJIN OMOYA<span>by THE FUJIYA GOHONJIN</span>
+        <a href="<?php echo $path; ?>story"><span>Story</span></a>
+      </div>
+    </div>
+  </section>
+  <section class="l-main__left">
+    <ul class="l-nav--list">
+      <li><a href="<?php echo $path; ?>lunch">Lunch</a></li>
+      <li><a href="<?php echo $path; ?>dinner">Dinner</a></li>
+      <li><a href="<?php echo $path; ?>beverage">Beverage</a></li>
+      <li><a href="<?php echo $path; ?>party">Party</a></li>
     </ul>
-
-    Hokkokukaidou Komorojyuku
-    Italian Restaurant KOMORO HONJIN OMOYA
-    by THE FUJIYA GOHONJIN
-    <a href="#story"><span>Story</span></a>
-  </section>
-
-  <section class="l-main">
-    News
-
     <figure>
-      <img src="./assets/img/top/ph002.jpg" alt="">
-    </figure>
-
-    <dl>
-      <a href="">
-        <dt>22 August 2023</dt>
-        <dd>スペシャル セプテンバー<span>月曜～木曜 限定</span></dd>
-      </a>
-      <a href="">
-        <dt>22 August 2023</dt>
-        <dd>10月のレストラン営業<span>月曜～木曜 限定</span></dd>
-      </a>
-      <a href="">
-        <dt>22 August 2023</dt>
-        <dd>10大特典付きプレミアムフェア<span>9月3日 開催</span></dd>
-      </a>
-    </dl>
-
-    <a href=""><span>View more</span></a>
-  </section>
-
-  <section class="l-main">
-    Lunch<span>ランチ</span>
-    22 August 2023 11:30 - 15:00  [ Last Order 14:00 ]
-    <span>本日の営業は終了しました。</span>
-    <a href=""><span>View more</span></a>
-    <figure>
-      <img src="./assets/img/top/ph003.jpg" alt="">
+      <img src="<?php echo $path; ?>assets/img/common/logo.svg" alt="小諸本陣主屋 | 藤屋 | THE FUJIYA GOHONJIN">
     </figure>
   </section>
+</section>
 
-  <section class="l-main">
-    Dinner<span>ディナー</span>
-    22 August 2023 17:30 - 21:30  [ Last Order 20:00 ]
-    <span>本日お時間帯によりお席に空きがございます</span>
-    <a href=""><span>View more</span></a>
-    <figure>
-      <img src="./assets/img/top/ph004.jpg" alt="">
-    </figure>
+  <section class="l-main home_news">
+    <h2 class="c-title -LL -eng -colorWht">News</h2>
+    <div class="-flx">
+      <section class="l-main__left">
+        <figure>
+          <img src="<?php echo $path; ?>assets/img/top/ph002.jpg" alt="" class="chenge_img">
+        </figure>
+      </section>
+      <section class="l-main__right">
+        <dl class="-list">
+          <a href="" class="active change_img01">
+            <dt class="-eng">22 August 2023</dt>
+            <dd>
+              <figure><img src="<?php echo $path; ?>assets/img/top/ph002.jpg" alt=""></figure>
+              スペシャル セプテンバー<span>月曜～木曜 限定</span>
+            </dd>
+          </a>
+          <a href="" class=" change_img02">
+            <dt class="-eng">22 August 2023</dt>
+            <dd>
+              <figure><img src="<?php echo $path; ?>assets/img/top/ph002.jpg" alt=""></figure>
+              10月のレストラン営業<span>月曜～木曜 限定</span>
+            </dd>
+          </a>
+          <a href="" class=" change_img03">
+            <dt class="-eng">22 August 2023</dt>
+            <dd>
+              <figure><img src="<?php echo $path; ?>assets/img/top/ph002.jpg" alt=""></figure>
+              10大特典付きプレミアムフェア<span>9月3日 開催</span>
+            </dd>
+          </a>
+        </dl>
+        <ul class="-brackets-list -reverse">
+          <li class="-wht"><a href="<?php echo $path; ?>news" class="-eng">View more</a></li>
+        </ul>
+      </section>
+    </div>
   </section>
 
-  <section class="l-main">
-    Beverage<span>お飲み物</span>
-    22 August 2023 17:30 - 21:30  [ Last Order 20:00 ]
-    <p>お飲み物の紹介文、小諸のワインについても触れられると良いかと思いました。40-50</p>
-    <a href=""><span>View more</span></a>
-    <figure>
-      <img src="./assets/img/top/ph005.jpg" alt="">
-    </figure>
+  <section class="l-main -flx home_menu">
+    <section class="l-main__left -positionEnd2">
+      <h2 class="c-title -LL -eng">Lunch<span>お飲み物</span></h2>
+      <h4 class="-date -eng">22 August 2023 <span>11:30 - 15:00 [ Last Order 14:00 ]</span></h4>
+      <p class="-dot -lunch">本日の営業は終了しました。</p>
+      <ul class="-brackets-list">
+        <li class="-blk"><a href="<?php echo $path; ?>lunch" class="-eng">View more</a></li>
+      </ul>
+    </section>
+    <section class="l-main__right">
+      <figure>
+        <img src="<?php echo $path; ?>assets/img/top/ph003.jpg" alt="">
+      </figure>
+    </section>
   </section>
 
-  <section class="l-main">
-    Party<span>ご宴会・会議</span>
-    22 August 2023 17:30 - 21:30  [ Last Order 20:00 ]
-    <p>宴会・会議・セミナー・企画など利用シーンを想定することができるテキストが入ります40-50</p>
-    <a href=""><span>View more</span></a>
-    <figure>
-      <img src="./assets/img/top/ph006.jpg" alt="">
-    </figure>
+  <section class="l-main -flx home_menu">
+    <section class="l-main__left -positionEnd2">
+      <h2 class="c-title -LL -eng">Dinner<span>ディナー</span></h2>
+      <h4 class="-date -eng">22 August 2023 <span>17:30 - 21:30  [ Last Order 20:00 ]</span></h4>
+      <p class="-dot -dinner">本日お時間帯によりお席に空きがございます</p>
+      <ul class="-brackets-list">
+        <li class="-blk"><a href="<?php echo $path; ?>dinner" class="-eng">View more</a></li>
+      </ul>
+    </section>
+    <section class="l-main__right">
+      <figure>
+        <img src="<?php echo $path; ?>assets/img/top/ph004.jpg" alt="">
+      </figure>
+    </section>
+  </section>
+
+  <section class="l-main -flx home_menu">
+    <section class="l-main__left -positionEnd2">
+      <h2 class="c-title -LL -eng">Beverage<span>お飲み物</span></h2>
+      <h4 class="-date -eng">22 August 2023 <span>17:30 - 21:30  [ Last Order 20:00 ]</span></h4>
+      <p>飲み物の紹介文、小諸のワインについても触れられると良いかと思いました。40-50</p>
+      <ul class="-brackets-list">
+        <li class="-blk"><a href="<?php echo $path; ?>beverage" class="-eng">View more</a></li>
+      </ul>
+    </section>
+    <section class="l-main__right">
+      <figure>
+        <img src="<?php echo $path; ?>assets/img/top/ph005.jpg" alt="">
+      </figure>
+    </section>
+  </section>
+
+  <section class="l-main -flx home_menu">
+    <section class="l-main__left -positionEnd2">
+      <h2 class="c-title -LL -eng">Party<span>ご宴会・会議</span></h2>
+      <h4 class="-date -eng">22 August 2023 <span>17:30 - 21:30  [ Last Order 20:00 ]</span></h4>
+      <p>宴会・会議・セミナー・企画など利用シーンを想定することができるテキストが入ります40-50</p>
+      <ul class="-brackets-list">
+        <li class="-blk"><a href="<?php echo $path; ?>party" class="-eng">View more</a></li>
+      </ul>
+    </section>
+    <section class="l-main__right">
+      <figure>
+        <img src="<?php echo $path; ?>assets/img/top/ph006.jpg" alt="">
+      </figure>
+    </section>
   </section>
 
   <section>
     <figure>
-      <img src="./assets/img/top/ph007-1.jpg" alt="">
+      <img src="<?php echo $path; ?>assets/img/top/ph007-1.jpg" alt="">
     </figure>
     <figure>
-      <img src="./assets/img/top/ph007-2.png" alt="">
+      <img src="<?php echo $path; ?>assets/img/top/ph007-2.png" alt="">
     </figure>
     <figure>
-      <img src="./assets/img/top/ph007-3.png" alt="">
+      <img src="<?php echo $path; ?>assets/img/top/ph007-3.png" alt="">
     </figure>
     Story
     牛に引かれて善光寺参り
@@ -195,389 +254,62 @@
     <a href=""><span>View more</span></a>
   </section>
 
-
-
-
-
-
-
-  <!-- <div class="p-nav__inner---navi">
-    <div class="p-nav__inner---grid">
-      <dl class="grid1">
-        <dt>Access & Parking</dt>
-        <dd>
-          <p><address>〒384-0031<br>長野県小諸市大手1丁目6-14</address></p>
-          <p>
-            <a href="" class="c-link -link" target="_blank"><span>Googlemap</span></a><br>
-            <a href="" class="c-link -link"><span>アクセス・駐車場</span></a>
-          </p>
-        </dd>
-      </dl>
-      <dl class="grid2">
-        <dt>Reserve & Info</dt>
-        <dd>
-          <p>
-            <span class="-tel">tel:<span>000-0000-0000</span></span><br>
-            <span class="-time">10:00〜15:30/16:30〜Close</span>
-          </p>
-          <p><a href="" class="c-link -link"><span>ご予約・営業案内</span></a></p>
-        </dd>
-      </dl>
-      <dl class="grid3">
-        <dt>Help</dt>
-        <dd>
-          <p>
-            <a href="./news" class="c-link -link"><span>お知らせ</span></a><br>
-            <a href="./faq" class="c-link -link"><span>よくあるご質問</span></a><br>
-            <a href="./contact" class="c-link -link"><span>お問い合わせフォーム</span></a>
-          </p>
-        </dd>
-      </dl>
-      <dl class="grid4">
-        <dt>Social Media</dt>
-        <dd>
-          <p>
-            <a href="Facebook" target="_blank" class="c-link -link"><span>Facebook</span></a><br>
-            <a href="Instagram" target="_blank" class="c-link -link"><span>Instagram</span></a>
-          </p>
-        </dd>
-      </dl>
-    </div>
-  </div>
-</section>
-
-<main id="main">
-
-  <section class="l-main -flx templateA">
-    <section class="l-main__left">
-      <div class="-position">
-        <h1 class="c-title -LL -eng">TemplateA<span>テンプレートA</span></h1>
-        <div class="l-main__left---lead">
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト（50文字）
-        </div>
-      </div>
-    </section>
-    <section class="l-main__right">
-      <div class="p-text-box">
-        <div class="conts-areaA">
-          <h2 class="c-title -L">コンテンツエリアA</h2>
-          <p>テキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリア</p>
-        </div>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaA pickup-bg">
-          <h2 class="c-title -L">コンテンツエリアA</h2>
-          <p>テキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリア</p>
-        </div>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaA pickup-border">
-          <h2 class="c-title -L">コンテンツエリアA</h2>
-          <p>テキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリア</p>
-        </div>
-      </div>
-
-      <div class="p-text-box">
-        <h2 class="c-title -L -narrow">コンテンツエリアB 少し狭めコンテンツエリアB 少し狭めコンテンツエリアB 少し狭め</h2>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaB">
-          <h2 class="c-title -L">コンテンツエリアB 少し狭めコンテンツエリアB 少し狭め</h2>
-          <p>テキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリア</p>
-        </div>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaB pickup-bg">
-          <h2 class="c-title -L">ピックアップするエリア</h2>
-          <p>テキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリア</p>
-        </div>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaB pickup-border">
-          <h2 class="c-title -L">ピックアップするエリア</h2>
-          <p>テキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリア</p>
-        </div>
-      </div>
-
-    </section>
-  </section>
-
-  <section class="l-main -flx">
-    <section class="l-main__left2">
-      <h2 class="c-title -L -eng">Parts List<span>パーツリスト</span></h2>
-      <div class="l-main__left---lead">
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト（50文字）
-      </div>
-      <figure class="l-main__left---thumb">
-        <img src="./assets/img/dummy/455x455.jpg" alt="">
-      </figure>
-    </section>
-    <section class="l-main__right2">
-      <div class="p-text-box">
-        <h2 class="c-title -L -narrow">いろんな部品いろんな部品いろんな部品いろんな部品いろんな部品いろんな部品いろんな部品</h2>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaB">
-          <h2 class="c-title -LL -eng">Eng Title Eng Title LL</h2>
-          <h2 class="c-title -L -eng">Eng Title Eng Title L</h2>
-          <h2 class="c-title -M -eng">Eng Title Eng Title M</h2>
-          <h2 class="c-title -S -eng">Eng Title Eng Title S</h2>
-          <h2 class="c-title -SS -eng">Eng Title Eng Title SS</h2>
-        </div>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaB">
-          <h2 class="c-title -LL">見出し LL</h2>
-          <h2 class="c-title -L">見出し L</h2>
-          <h2 class="c-title -M">見出し M</h2>
-          <h2 class="c-title -S">見出し S</h2>
-          <h2 class="c-title -SS">見出し SS</h2>
-        </div>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaB">
-          <p>テキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリア</p>
-        </div>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaB">
-          <h2 class="c-title -M">見出しM</h2>
-          <p>テキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリア</p>
-        </div>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaB">
-          <h2 class="c-title -S">見出しS</h2>
-          <p>テキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリア</p>
-        </div>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaB">
-          <h2 class="c-title -M"><span class="-eng">UL</span>リスト</h2>
-          <ul class="p-list -dot">
-            <li>リストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリスト</li>
-            <li>リストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリスト</li>
-            <li>リストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリスト</li>
-            <li>リストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリスト</li>
-            <li>リストリストリストリストリストリストリストリスト</li>
-            <li>リストリストリストリストリストリストリストリスト</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaB">
-          <h2 class="c-title -M"><span class="-eng">OL</span>リスト</h2>
-          <ol class="p-list -num">
-            <li>リストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリスト</li>
-            <li>リストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリスト</li>
-            <li>リストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリスト</li>
-            <li>リストリストリストリストリストリストリストリストリストリストリストリストリストリストリストリスト</li>
-            <li>リストリストリストリストリストリストリストリスト</li>
-            <li>リストリストリストリストリストリストリストリスト</li>
-          </ol>
-        </div>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaB">
-          <h2 class="c-title -M"><span class="-eng">DL</span>リスト</h2>
-          <dl class="p-list -dl">
-            <div class="-flx">
-              <dt>見出し</dt>
-              <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
-            </div>
-            <div class="-flx">
-              <dt>見出し</dt>
-              <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
-            </div>
-            <div class="-flx">
-              <dt>見出し</dt>
-              <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaB">
-          <h2 class="c-title -M">注釈文</h2>
-          <ul class="p-list -kome">
-            <li>注釈文が入ります。注釈文が入ります。注釈文が入ります。注釈文が入ります。</li>
-            <li>注釈文が入ります。注釈文が入ります。注釈文が入ります。注釈文が入ります。</li>
-            <li>注釈文が入ります。注釈文が入ります。注釈文が入ります。注釈文が入ります。注釈文が入ります。注釈文が入ります。注釈文が入ります。注釈文が入ります。</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="p-text-box">
-        <div class="conts-areaB">
-          <h2 class="c-title -M">リンク一覧</h2>
-          <p><a href="" class="c-link -link"><span>リンクLine</span></a></p>
-          <p><a href="" class="c-link -arwA"><span>リンクA1</span></a></p>
-          <p><a href="" class="c-link -arwB"><span>リンクA2</span></a></p>
-          <p><a href="" class="c-link -blankA"><span>リンクA1blank</span></a></p>
-          <p><a href="" class="c-link -blankB"><span>リンクA2blank</span></a></p>
-          <p><a href="" class="c-link -link -arwA"><span>リンクA1Line</span></a></p>
-          <p><a href="" class="c-link -link -arwB"><span>リンクA2Line</span></a></p>
-          <p><a href="" class="c-link -link -blankA"><span>リンクA1blankLine</span></a></p>
-          <p><a href="" class="c-link -link -blankB"><span>リンクA2blankLink</span></a></p>
-          <p><a href="" class="c-link -border -arwA"><span>リンクA1Border</span></a></p>
-          <p><a href="" class="c-link -border -arwB"><span>リンクA2Border</span></a></p>
-          <p><a href="" class="c-link -border -blankA"><span>リンクA1blankBorder</span></a></p>
-          <p><a href="" class="c-link -border -blankB"><span>リンクA2blankBorder</span></a></p>
-        </div>
-      </div>
-
-    </section>
-  </section>
-
-  <section class="l-main">
-    <div class="column01 p-column-box">
-      <div class="column01-center">
-        <div class="p-text-box">
-          <h2 class="c-title -L">見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し</h2>
-          <p>テキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリア</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="column02 p-column-box">
-      <div class="column02-ph">
-        <figure><img src="./assets/img/dummy/960x939.jpg" alt=""></figure>
-      </div>
-      <div class="column02-txt">
-        <div class="p-text-box">
-          <div class="conts-area">
-            <h2 class="c-title -L">見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し</h2>
-            <p>テキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリア</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="column02 -reverse p-column-box">
-      <div class="column02-ph">
-        <figure><img src="./assets/img/dummy/960x939.jpg" alt=""></figure>
-      </div>
-      <div class="column02-txt">
-        <div class="p-text-box">
-          <div class="conts-area">
-            <h2 class="c-title -L">見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し見出し</h2>
-            <p>テキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリアテキストエリア</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <section class="l-main -flx">
-    <section class="l-main__left2">
-      <h2 class="c-title -L -eng">Parts List2<span>パーツリスト</span></h2>
-    </section>
-    <section class="l-main__right2">
-      <div class="p-accordion">
-        <dl>
-          <div>
-            <dt>質問文が入ります。質問文が入ります。質問文が入ります。</dt>
-            <dd>
-              <p>回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。</p>
-              <p><a href="" class="c-link -arwA"><span>リンクA1</span></a></p>
-            </dd>
-          </div>
-          <div>
-            <dt>質問文が入ります。質問文が入ります。質問文が入ります。</dt>
-            <dd>
-              <p>回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。回答文が入ります。</p>
-              <p><a href="" class="c-link -arwA"><span>リンクA1</span></a></p>
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-  </section> -->
-
 </main>
 
-<!-- ?php include($_SERVER['DOCUMENT_ROOT'] . /test/a/daimatsu/assets/inc/footer.php");? -->
-<footer class="l-footer">
-  <div class="p-footer">
-    <!-- <div class="p-nav"> -->
-      <div class="p-nav__inner">
-        <div class="p-nav__inner---logo">
-          <figure>
-            <img src="./assets/img/common/logo.svg" alt="小諸本陣主屋 | 藤屋 | THE FUJIYA GOHONJIN">
-          </figure>
-        </div>
-        <div class="p-nav__inner---navi">
-          <div class="p-nav__inner---grid">
-            <dl class="grid1">
-              <dt>Access & Parking</dt>
-              <dd>
-                <p><address>〒384-0031<br>長野県小諸市大手1丁目6-14</address></p>
-                <p>
-                  <a href="" class="c-link -link" target="_blank"><span>Googlemap</span></a><br>
-                  <a href="" class="c-link -link"><span>アクセス・駐車場</span></a>
-                </p>
-              </dd>
-            </dl>
-            <dl class="grid2">
-              <dt>Reserve & Info</dt>
-              <dd>
-                <p>
-                  <span class="-tel">tel:<span>000-0000-0000</span></span><br>
-                  <span class="-time">10:00〜15:30/16:30〜Close</span>
-                </p>
-                <p><a href="" class="c-link -link"><span>ご予約・営業案内</span></a></p>
-              </dd>
-            </dl>
-            <dl class="grid3">
-              <dt>Help</dt>
-              <dd>
-                <p>
-                  <a href="./news" class="c-link -link"><span>お知らせ</span></a><br>
-                  <a href="./faq" class="c-link -link"><span>よくあるご質問</span></a><br>
-                  <a href="./contact" class="c-link -link"><span>お問い合わせフォーム</span></a>
-                </p>
-              </dd>
-            </dl>
-            <dl class="grid4">
-              <dt>Social Media</dt>
-              <dd>
-                <p>
-                  <a href="Facebook" target="_blank" class="c-link -link"><span>Facebook</span></a><br>
-                  <a href="Instagram" target="_blank" class="c-link -link"><span>Instagram</span></a>
-                </p>
-              </dd>
-            </dl>
-          </div>
-        </div>
-      </div>
-    <!-- </div> -->
-    <small>&copy; KOMORO HONJIN OMOYA. <a href="">Privacy Policy.</a></small>
-  </div>
-  <div class="p-footer__bottom">
-    幸せなときを、もっと幸せに。
-    <a href="" class="c-link -blankB" target="_blank"><span>THE FUJIYA GOHONJIN</span></a>
-  </div>
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<script src="./assets/js/animation.gsap.min.js"></script>
-<script src="./assets/js/TweenMax.min.js"></script>
-<script src="./assets/js/intersectionObserve.js" defer></script>
-<script src="./assets/js/common.js"></script>
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/test/assets/inc/footer.php");?>
+
 </body>
 </html>
+
+
+<script>
+$(function() {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    //画面横幅が768px以下のときの処理
+  } else {
+    $(function() {
+      $(".change_img01").hover(function() {
+        $(".chenge_img").attr("src","/test/assets/img/top/ph002.jpg");
+      });
+      $(".change_img02").hover(function() {
+        $(".chenge_img").attr("src","/test/assets/img/top/ph002-2.jpg");
+      });
+      $(".change_img03").hover(function() {
+        $(".chenge_img").attr("src","/test/assets/img/top/ph002-3.jpg");
+      });
+    });
+  };
+});
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+window.onload = function () {
+  const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    speed: 300,
+    effect: 'fade',
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      spaceBetween: 40,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    on: {
+      slideChange: function () {
+        if (this.realIndex > 0) {
+          this.params.autoplay.delay = 4700
+        }
+      },
+    },
+  })
+}
+</script>

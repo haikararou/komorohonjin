@@ -58,7 +58,11 @@ main {
     .-flex-end {
         align-items: flex-end;
     }
+    .-reverse {
+        flex-direction:row-reverse;
+    }
     &__left {
+        width: 100%;
         @include inc.mq(tab) {
             width: 28.2vw;
         }
@@ -121,6 +125,7 @@ main {
         }
     }
     &__right {
+        width: 100%;
         @include inc.mq(tab) {
             width: 53.85vw;
         }

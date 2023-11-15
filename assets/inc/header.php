@@ -9,7 +9,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header class="l-header">
   <figure class="l-logo">
-    <a href="./"><img src="/test/assets/img/common/logo.svg" alt="小諸本陣主屋 | 藤屋 | THE FUJIYA GOHONJIN"></a>
+    <a href="<?php echo $path; ?>"><img src="/test/assets/img/common/logo.svg" alt="小諸本陣主屋 | 藤屋 | THE FUJIYA GOHONJIN"></a>
   </figure>
   <nav class="p-header">
     <ul class="-brackets-list -pc">

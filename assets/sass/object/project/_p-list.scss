@@ -242,6 +242,9 @@ p-list
     display:flex; flex-direction:column; justify-content:center;
     a {
       display:flex; flex-direction:column; justify-content:center;
+      span.active {
+        border-bottom: 1px solid inc.$color-blk;
+      }
     }
     & + li {
       &:before {

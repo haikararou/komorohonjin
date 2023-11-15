@@ -15,7 +15,7 @@
                 <p><address>〒384-0031<br>長野県小諸市大手1丁目6-14</address></p>
                 <p>
                   <a href="https://maps.app.goo.gl/HhoRNyUTBAbeCjm79" class="c-link -link" target="_blank"><span>Googlemap</span></a><br>
-                  <a href="<?php echo $path; ?>#access" class="c-link -link"><span>アクセス・駐車場</span></a>
+                  <a href="<?php echo $path; ?>access" class="c-link -link"><span>アクセス・駐車場</span></a>
                 </p>
               </dd>
             </dl>
@@ -42,6 +42,10 @@
       </div>
     <!-- </div> -->
     <small>&copy; KOMORO HONJIN OMOYA. <a href="<?php echo $path; ?>privacypolicy" target="_blank">Privacy Policy.</a></small>
+  </div>
+  <div class="p-footer__bottom">
+    幸せなときを、もっと幸せに。
+    <a href="https://www.thefujiyagohonjin.com/" class="c-link -blankB" target="_blank"><span>THE FUJIYA GOHONJIN</span></a>
   </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
